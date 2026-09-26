@@ -14,5 +14,7 @@ class Settings:
     
     GCP_PROJECT_ID: str = os.getenv("GOOGLE_CLOUD_PROJECT", "placement-os-dev")
     FIRESTORE_EMULATOR_HOST: str = os.getenv("FIRESTORE_EMULATOR_HOST", "")
+    SCHEDULER_SECRET: str = os.getenv("SCHEDULER_SECRET", "placement_os_secret_token")
 
 settings = Settings()
+

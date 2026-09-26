@@ -102,3 +102,36 @@ async def test_complete_student_flow(client):
     ans_data = int_ans.json()
     assert ans_data["evaluation"]["correctness"] >= 70.0
     assert ans_data["next_question"] is not None or ans_data["is_completed"] is True
+
+    # 10. Document Signed Upload URL & Document Registration
+    doc_url_res = await client.post("/document/upload-url", json={
+        "user_id": user_id,
+        "filename": "resume_sarah.pdf",
+        "doc_type": "resume"
+    })
+    assert doc_url_res.status_code == 200
+    doc_url_data = doc_url_res.json()
+    assert "upload_url" in doc_url_data
+    doc_id = doc_url_data["document_id"]
+    
+    doc_reg_res = await client.post("/document/register", json={
+        "user_id": user_id,
+        "document_id": doc_id,
+        "gcs_path": doc_url_data["gcs_path"],
+        "doc_type": "resume",
+        "filename": "resume_sarah.pdf",
+        "extracted_text": "Sarah Connor - Backend Developer with Python, FastAPI, and SQL experience."
+    })
+    assert doc_reg_res.status_code == 200
+    assert doc_reg_res.json()["status"] == "registered"
+
+    # 11. Scheduler Ingestion Endpoint Authentication & Trigger
+    # Unauthenticated attempt (should fail with 401)
+    unauth_ingest = await client.post("/api/v1/ingest/trigger")
+    assert unauth_ingest.status_code == 401
+    
+    # Authenticated attempt with scheduler secret
+    auth_ingest = await client.post("/api/v1/ingest/trigger", headers={"X-Scheduler-Secret": "placement_os_secret_token"})
+    assert auth_ingest.status_code == 200
+    assert auth_ingest.json()["status"] == "success"
+

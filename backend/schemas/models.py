@@ -89,14 +89,29 @@ class DashboardResponse(BaseModel):
 # Questions & Attempts
 class QuestionItem(BaseModel):
     question_id: str
+    id: Optional[str] = None
     title: str
-    topic: str
     category: str
-    difficulty: str  # "Easy", "Medium", "Hard"
+    subcategory: Optional[str] = None
+    topic: str
+    skills: List[str] = Field(default_factory=list)
+    question_type: str = "mcq"
+    difficulty: str = "Medium"  # "Easy", "Medium", "Hard"
+    companies: List[str] = Field(default_factory=list)
+    roles: List[str] = Field(default_factory=list)
+    observed_frequency: float = 1.0
+    source_count: int = 1
+    student_relevance: float = 0.8
     content: str
     options: Optional[List[str]] = None
     correct_option_index: Optional[int] = None
     explanation: Optional[str] = None
+    solution_approach: Optional[str] = None
+    test_cases: List[Dict[str, Any]] = Field(default_factory=list)
+    learning_hints: List[str] = Field(default_factory=list)
+    content_hash: Optional[str] = None
+    sources: List[str] = Field(default_factory=list)
+
 
 class QuestionAttemptRequest(BaseModel):
     user_id: str
@@ -258,6 +273,33 @@ class StrategyNextResponse(BaseModel):
     rationale: str
     focus_areas: List[str]
 
+# Document & Cloud Storage
+class DocumentUploadUrlRequest(BaseModel):
+    user_id: str
+    filename: str
+    doc_type: str  # "resume", "project_report", "ppt", "readme"
+    content_type: Optional[str] = "application/pdf"
+
+class DocumentUploadUrlResponse(BaseModel):
+    document_id: str
+    upload_url: str
+    gcs_path: str
+    doc_type: str
+    expires_in_seconds: int = 3600
+
+class DocumentRegisterRequest(BaseModel):
+    user_id: str
+    document_id: str
+    gcs_path: str
+    doc_type: str
+    filename: str
+    extracted_text: Optional[str] = None
+
+class DocumentRegisterResponse(BaseModel):
+    document_id: str
+    status: str
+    message: str
+
 # Dream Company DNA
 class DreamCompanyDNARequest(BaseModel):
     user_id: str
@@ -272,3 +314,5 @@ class DreamCompanyDNAResponse(BaseModel):
     weak_areas: List[str]
     recommended_preparation: List[str]
     assumptions_made: List[str]
+
+

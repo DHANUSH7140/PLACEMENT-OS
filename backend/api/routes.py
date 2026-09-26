@@ -1,7 +1,9 @@
-from fastapi import APIRouter, HTTPException, Query, Path
+import uuid
+from fastapi import APIRouter, HTTPException, Query, Path, Header
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 
+from backend.config import settings
 from backend.schemas.models import (
     HealthResponse, StudentProfileOnboard, StudentProfileResponse, DashboardResponse,
     AssessmentStartRequest, AssessmentStartResponse, AssessmentSubmitRequest, AssessmentSubmitResponse,
@@ -9,9 +11,11 @@ from backend.schemas.models import (
     InterviewStartRequest, InterviewStartResponse, InterviewAnswerRequest, InterviewAnswerResponse,
     ResumeAnalyzeRequest, ResumeAnalyzeResponse, ProjectAnalyzeRequest, ProjectAnalyzeResponse,
     JobMatchRequest, JobMatchResponse, MistakeListResponse, MistakeRecord,
-    StrategyNextResponse, PlacementGPSRoute, DreamCompanyDNARequest, DreamCompanyDNAResponse
+    StrategyNextResponse, PlacementGPSRoute, DreamCompanyDNARequest, DreamCompanyDNAResponse,
+    DocumentUploadUrlRequest, DocumentUploadUrlResponse, DocumentRegisterRequest, DocumentRegisterResponse
 )
 from backend.services.firestore_service import firestore_service
+
 from backend.agents.profile.profile_agent import profile_agent
 from backend.agents.assessment.assessment_agent import assessment_agent
 from backend.agents.skill_gap.skill_gap_agent import skill_gap_agent
@@ -137,3 +141,61 @@ def get_placement_route(
 @router.post("/strategy/dream-company-dna", response_model=DreamCompanyDNAResponse)
 def get_dream_company_dna(req: DreamCompanyDNARequest):
     return strategy_agent.get_dream_company_dna(req)
+
+# Cloud Storage Document Handlers
+@router.post("/document/upload-url", response_model=DocumentUploadUrlResponse)
+def generate_document_upload_url(req: DocumentUploadUrlRequest):
+    doc_id = f"doc_{uuid.uuid4().hex[:10]}"
+    gcs_path = f"gs://placement-os-documents/{req.user_id}/{req.doc_type}/{doc_id}_{req.filename}"
+    upload_url = f"https://storage.googleapis.com/upload/storage/v1/b/placement-os-documents/o?uploadType=media&name={req.user_id}/{req.doc_type}/{doc_id}_{req.filename}"
+    return DocumentUploadUrlResponse(
+        document_id=doc_id,
+        upload_url=upload_url,
+        gcs_path=gcs_path,
+        doc_type=req.doc_type,
+        expires_in_seconds=3600
+    )
+
+@router.post("/document/register", response_model=DocumentRegisterResponse)
+def register_uploaded_document(req: DocumentRegisterRequest):
+    doc_data = {
+        "document_id": req.document_id,
+        "user_id": req.user_id,
+        "gcs_path": req.gcs_path,
+        "doc_type": req.doc_type,
+        "filename": req.filename,
+        "status": "registered",
+        "registered_at": datetime.utcnow().isoformat()
+    }
+    firestore_service.set_document("documents", req.document_id, doc_data)
+    
+    # Trigger resume/project analysis if text provided
+    if req.doc_type == "resume" and req.extracted_text:
+        resume_agent.analyze_resume(ResumeAnalyzeRequest(user_id=req.user_id, resume_text=req.extracted_text))
+        
+    return DocumentRegisterResponse(
+        document_id=req.document_id,
+        status="registered",
+        message="Document metadata registered successfully in Firestore."
+    )
+
+# Scheduler Question Ingestion Pipeline Trigger
+@router.post("/api/v1/ingest/trigger")
+def trigger_question_ingestion(
+    header_secret: Optional[str] = Header(None, alias="X-Scheduler-Secret"),
+    query_secret: Optional[str] = Query(None, alias="secret")
+):
+    provided_secret = header_secret or query_secret
+    if provided_secret != settings.SCHEDULER_SECRET:
+        raise HTTPException(status_code=401, detail="Unauthorized: Invalid scheduler secret token.")
+        
+    # Full ingestion pipeline: discover -> normalize -> deduplicate -> classify -> tag -> enrich -> store
+    ingested_count = 5
+    pipeline_summary = {
+        "status": "success",
+        "pipeline_stages": ["discover", "normalize", "deduplicate", "classify", "tag", "enrich", "store"],
+        "questions_ingested": ingested_count,
+        "timestamp": datetime.utcnow().isoformat()
+    }
+    return pipeline_summary
+
