@@ -24,7 +24,7 @@ import { Profile } from './pages/Profile';
 
 
 // Protected Route Wrapper
-const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
+const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { authState } = useAuth();
   if (authState === 'loading') return <div className="p-8">Loading...</div>;
   if (authState === 'unauthenticated') return <Navigate to="/login" replace />;
