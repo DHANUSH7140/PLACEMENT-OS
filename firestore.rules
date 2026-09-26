@@ -1,0 +1,130 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && request.auth.token.role == 'admin';
+    }
+
+    function isMentor() {
+      return isAuthenticated() && (request.auth.token.role == 'mentor' || isAdmin());
+    }
+
+    // ============================================================
+    // 1. PUBLIC / SHARED QUESTION BANK
+    // ============================================================
+    // Any authenticated user (or students on Lovable frontend) can read questions.
+    // Writes are strictly restricted to admin or backend ingestion service account.
+    match /questions/{questionId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // ============================================================
+    // 2. USER & PROFILE COLLECTIONS
+    // ============================================================
+    match /users/{userId} {
+      allow read: if isAuthenticated() && (isOwner(userId) || isMentor());
+      allow create, update: if isOwner(userId) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    match /student_profiles/{studentId} {
+      allow read: if isAuthenticated() && (isOwner(studentId) || isMentor());
+      allow create, update: if isOwner(studentId) || isAdmin();
+      allow delete: if isAdmin();
+    }
+
+    // ============================================================
+    // 3. STUDENT ACTIVITY & PROGRESS (STRICT PRIVATE ISOLATION)
+    // ============================================================
+    // Students can NEVER read or tamper with another student's attempts, mistakes, or plans.
+
+    match /question_attempts/{attemptId} {
+      allow read: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isMentor()
+      );
+      allow create: if isAuthenticated() && request.resource.data.student_id == request.auth.uid;
+      allow update: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isAdmin()
+      );
+      allow delete: if isAdmin();
+    }
+
+    match /assessments/{assessmentId} {
+      allow read: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isMentor()
+      );
+      allow create: if isAuthenticated() && request.resource.data.student_id == request.auth.uid;
+      allow update: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isMentor()
+      );
+      allow delete: if isAdmin();
+    }
+
+    match /interviews/{interviewId} {
+      allow read: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isMentor()
+      );
+      allow create: if isAuthenticated() && request.resource.data.student_id == request.auth.uid;
+      allow update: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isMentor()
+      );
+      allow delete: if isAdmin();
+    }
+
+    match /mistakes/{mistakeId} {
+      allow read: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isMentor()
+      );
+      allow create: if isAuthenticated() && request.resource.data.student_id == request.auth.uid;
+      allow update: if isAuthenticated() && resource.data.student_id == request.auth.uid;
+      allow delete: if isAuthenticated() && resource.data.student_id == request.auth.uid;
+    }
+
+    match /learning_plans/{planId} {
+      allow read: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isMentor()
+      );
+      allow create: if isAuthenticated() && request.resource.data.student_id == request.auth.uid;
+      allow update: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isMentor()
+      );
+      allow delete: if isAdmin();
+    }
+
+    // ============================================================
+    // 4. DOCUMENTS METADATA (RESUMES, REPORTS, PPTS, READMES)
+    // ============================================================
+    match /documents/{docId} {
+      allow read: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isMentor()
+      );
+      allow create: if isAuthenticated() && request.resource.data.student_id == request.auth.uid;
+      allow update: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isAdmin()
+      );
+      allow delete: if isAuthenticated() && resource.data.student_id == request.auth.uid;
+    }
+
+    // ============================================================
+    // 5. AUDIT EVENTS & TELEMETRY
+    // ============================================================
+    match /events/{eventId} {
+      allow read: if isAuthenticated() && (
+        resource.data.student_id == request.auth.uid || isAdmin()
+      );
+      allow create: if isAuthenticated() && request.resource.data.student_id == request.auth.uid;
+      allow update, delete: if isAdmin();
+    }
+  }
+}

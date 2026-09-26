@@ -1,0 +1,1807 @@
+{
+  "users": {
+    "usr_student_demo_01": {
+      "uid": "usr_student_demo_01",
+      "email": "alex.student@placementos.dev",
+      "display_name": "Alex Mercer",
+      "photo_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+      "role": "student",
+      "created_at": "2026-09-24T05:47:06.161413+00:00",
+      "last_login": "2026-09-26T05:47:06.161413+00:00",
+      "is_active": true
+    },
+    "usr_mentor_demo_02": {
+      "uid": "usr_mentor_demo_02",
+      "email": "sarah.mentor@placementos.dev",
+      "display_name": "Sarah Jenkins",
+      "photo_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
+      "role": "mentor",
+      "created_at": "2026-09-24T05:47:06.161413+00:00",
+      "last_login": "2026-09-26T05:47:06.161413+00:00",
+      "is_active": true
+    }
+  },
+  "student_profiles": {
+    "usr_student_demo_01": {
+      "student_id": "usr_student_demo_01",
+      "full_name": "Alex Mercer",
+      "college_name": "National Institute of Technology",
+      "branch": "Computer Science & Engineering",
+      "graduation_year": 2026,
+      "cgpa": 8.84,
+      "target_companies": [
+        "Amazon",
+        "Google",
+        "Microsoft",
+        "Flipkart"
+      ],
+      "target_roles": [
+        "SDE-1",
+        "Software Engineer"
+      ],
+      "preferred_languages": [
+        "Python",
+        "Java",
+        "C++"
+      ],
+      "readiness_score": 76.5,
+      "total_questions_solved": 48,
+      "category_progress": {
+        "DSA": 82.0,
+        "SQL": 75.0,
+        "DBMS": 85.0,
+        "OS": 70.0,
+        "Computer Networks": 65.0,
+        "OOP": 90.0,
+        "System Design": 55.0,
+        "HR": 80.0
+      },
+      "strengths": [
+        "Dynamic Programming",
+        "OOP Design",
+        "DBMS Transactions",
+        "SQL Window Functions"
+      ],
+      "weaknesses": [
+        "Distributed System Design",
+        "Network Subnetting",
+        "Graph Traversal Edge Cases"
+      ],
+      "resume_document_id": "doc_resume_alex_01",
+      "active_learning_plan_id": "lp_sprint_60_alex",
+      "created_at": "2026-09-24T05:47:06.161413+00:00",
+      "updated_at": "2026-09-26T05:47:06.161413+00:00"
+    }
+  },
+  "questions": {
+    "q_bcb4dcf17df05789": {
+      "id": "q_bcb4dcf17df05789",
+      "category": "DSA",
+      "subcategory": "Dynamic Programming",
+      "topic": "Knapsack",
+      "skills": [
+        "Knapsack"
+      ],
+      "question_type": "Coding",
+      "difficulty": "Medium",
+      "companies": [
+        "Amazon",
+        "Flipkart",
+        "Google",
+        "Microsoft"
+      ],
+      "roles": [
+        "SDE-1",
+        "Software Engineer"
+      ],
+      "observed_frequency": 14,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.206834+00:00",
+      "last_seen": "2026-09-26T05:47:20.206834+00:00",
+      "student_relevance": 0.76,
+      "title": "0/1 Knapsack Problem",
+      "problem_statement": "Given weights and values of N items, put these items in a knapsack of capacity W to get the maximum total value in the knapsack. Each item can either be selected entirely or not at all (0-1 property). Return the maximum value achievable.",
+      "explanation": "Evaluates core proficiency in DSA with an emphasis on Dynamic Programming. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Use 2D Dynamic Programming where dp[i][w] represents maximum value using first i items with knapsack capacity w. Transition: dp[i][w] = max(dp[i-1][w], val[i-1] + dp[i-1][w - wt[i-1]]) if wt[i-1] <= w else dp[i-1][w]. Can be space-optimized to a 1D array of size W+1 by iterating backwards.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Consider the binary choice for each item: include it or exclude it.",
+        "If you include an item, what happens to the remaining knapsack capacity?",
+        "Can you optimize the 2D DP table O(N*W) space into a single 1D row by iterating right-to-left?"
+      ],
+      "content_hash": "bcb4dcf17df05789b47a568796191f224ccb7dfc99da50f82c8fceacab7dc73a",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/dsa",
+          "source_item_id": "seed_0",
+          "discovered_at": "2026-09-26T05:47:20.206834+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.206834+00:00",
+      "updated_at": "2026-09-26T05:47:20.206834+00:00"
+    },
+    "q_2771a4df639a5b28": {
+      "id": "q_2771a4df639a5b28",
+      "category": "DSA",
+      "subcategory": "Arrays & Hashing",
+      "topic": "Two Pointer",
+      "skills": [],
+      "question_type": "Coding",
+      "difficulty": "Hard",
+      "companies": [
+        "Amazon",
+        "Goldman Sachs",
+        "Google"
+      ],
+      "roles": [
+        "SDE-1",
+        "SDE-2"
+      ],
+      "observed_frequency": 19,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.226558+00:00",
+      "last_seen": "2026-09-26T05:47:20.226558+00:00",
+      "student_relevance": 0.69,
+      "title": "Trapping Rain Water",
+      "problem_statement": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+      "explanation": "Evaluates core proficiency in DSA with an emphasis on Arrays & Hashing. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Optimal approach utilizes two pointers (left and right) keeping track of max_left and max_right. Water trapped at any index is min(max_left, max_right) - height[i]. Time complexity: O(N), Space complexity: O(1).",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "What determines the water trapped above bar i? The minimum of maximum height to its left and right minus its own height.",
+        "Can you avoid storing prefix and suffix maximums using two pointers moving inwards?"
+      ],
+      "content_hash": "2771a4df639a5b282f7ed115cbe182991fd0f6de5d525a817d7ca674a1ec57a7",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/dsa",
+          "source_item_id": "seed_1",
+          "discovered_at": "2026-09-26T05:47:20.226558+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.226558+00:00",
+      "updated_at": "2026-09-26T05:47:20.226558+00:00"
+    },
+    "q_e36110a383bcbd8b": {
+      "id": "q_e36110a383bcbd8b",
+      "category": "DSA",
+      "subcategory": "Linked Lists",
+      "topic": "Reversal",
+      "skills": [
+        "Linked List",
+        "Reverse Linked List"
+      ],
+      "question_type": "Coding",
+      "difficulty": "Hard",
+      "companies": [
+        "Amazon",
+        "Meta",
+        "Microsoft"
+      ],
+      "roles": [
+        "SDE-1",
+        "Software Engineer"
+      ],
+      "observed_frequency": 11,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.243235+00:00",
+      "last_seen": "2026-09-26T05:47:20.243235+00:00",
+      "student_relevance": 0.69,
+      "title": "Reverse Linked List in K-Group",
+      "problem_statement": "Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list. If the number of nodes is not a multiple of k, left-out nodes at the end should remain as-is.",
+      "explanation": "Evaluates core proficiency in DSA with an emphasis on Linked Lists. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Check if at least k nodes exist from current node. If yes, reverse those k nodes iteratively and recursively connect the tail of this reversed group to the result of reversing the next k nodes.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "First verify if there are k nodes remaining before attempting to reverse.",
+        "Standard linked list 3-pointer reversal (prev, curr, next) works for each group of k."
+      ],
+      "content_hash": "e36110a383bcbd8bf3fcd713f5a36036c7101be8a01f6576fd868d24e1abf071",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/dsa",
+          "source_item_id": "seed_2",
+          "discovered_at": "2026-09-26T05:47:20.243235+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.243235+00:00",
+      "updated_at": "2026-09-26T05:47:20.243235+00:00"
+    },
+    "q_cf3e0f324623c780": {
+      "id": "q_cf3e0f324623c780",
+      "category": "SQL",
+      "subcategory": "Window Functions",
+      "topic": "Dense Rank",
+      "skills": [],
+      "question_type": "Coding",
+      "difficulty": "Hard",
+      "companies": [
+        "Amazon",
+        "Flipkart",
+        "Oracle",
+        "Uber"
+      ],
+      "roles": [
+        "Backend Engineer",
+        "Data Analyst"
+      ],
+      "observed_frequency": 16,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.265451+00:00",
+      "last_seen": "2026-09-26T05:47:20.265451+00:00",
+      "student_relevance": 0.74,
+      "title": "Department Top Three Salaries",
+      "problem_statement": "A company's executives are interested in seeing who earns the most money in each of the company's departments. A high earner in a department is an employee who has a salary in the top three unique salaries for that department. Write a solution to find the employees who are high earners in each of the departments.",
+      "explanation": "Evaluates core proficiency in SQL with an emphasis on Window Functions. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Use DENSE_RANK() OVER (PARTITION BY departmentId ORDER BY salary DESC) as salary_rank in a Common Table Expression (CTE). Filter WHERE salary_rank <= 3 and INNER JOIN with Department table.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Why is DENSE_RANK preferred over RANK or ROW_NUMBER here? Because top 3 UNIQUE salaries are required.",
+        "Use a CTE or subquery because window functions cannot be directly filtered in the WHERE clause."
+      ],
+      "content_hash": "cf3e0f324623c78053ce5e3fca45494b65222f342acd203a9f6471894a71bc5d",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/sql",
+          "source_item_id": "seed_3",
+          "discovered_at": "2026-09-26T05:47:20.265451+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.265451+00:00",
+      "updated_at": "2026-09-26T05:47:20.265451+00:00"
+    },
+    "q_77b93ed20cbe282e": {
+      "id": "q_77b93ed20cbe282e",
+      "category": "SQL",
+      "subcategory": "Queries & Joins",
+      "topic": "Subqueries",
+      "skills": [],
+      "question_type": "Coding",
+      "difficulty": "Medium",
+      "companies": [
+        "Amazon",
+        "Cognizant",
+        "Infosys",
+        "TCS"
+      ],
+      "roles": [
+        "Data Analyst",
+        "Software Engineer"
+      ],
+      "observed_frequency": 22,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.279448+00:00",
+      "last_seen": "2026-09-26T05:47:20.279448+00:00",
+      "student_relevance": 0.76,
+      "title": "Second Highest Salary",
+      "problem_statement": "Write a SQL query to report the second highest distinct salary from the Employee table. If there is no second highest salary, the query should report null.",
+      "explanation": "Evaluates core proficiency in SQL with an emphasis on Queries & Joins. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "SELECT MAX(salary) AS SecondHighestSalary FROM Employee WHERE salary < (SELECT MAX(salary) FROM Employee); Or use IFNULL((SELECT DISTINCT salary FROM Employee ORDER BY salary DESC LIMIT 1 OFFSET 1), NULL).",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Make sure to handle duplicates with DISTINCT.",
+        "Ensure the query returns NULL (and not an empty row) when fewer than 2 distinct salaries exist."
+      ],
+      "content_hash": "77b93ed20cbe282eeb9e5b7adbe075a6feddb7c4113606569298bd53fc84a319",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/sql",
+          "source_item_id": "seed_4",
+          "discovered_at": "2026-09-26T05:47:20.279448+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.279448+00:00",
+      "updated_at": "2026-09-26T05:47:20.279448+00:00"
+    },
+    "q_f537bee997979b5e": {
+      "id": "q_f537bee997979b5e",
+      "category": "DBMS",
+      "subcategory": "Transactions & Concurrency",
+      "topic": "ACID Properties",
+      "skills": [
+        "Acid",
+        "Atomicity",
+        "Durability",
+        "Wal"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Easy",
+      "companies": [
+        "Infosys",
+        "Microsoft",
+        "Oracle",
+        "TCS"
+      ],
+      "roles": [
+        "Backend Engineer",
+        "Software Engineer"
+      ],
+      "observed_frequency": 18,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.296191+00:00",
+      "last_seen": "2026-09-26T05:47:20.296191+00:00",
+      "student_relevance": 0.73,
+      "title": "Explain ACID Properties and WAL Protocol",
+      "problem_statement": "Explain the four ACID properties in relational database management systems. How does Write-Ahead Logging (WAL) ensure Atomicity and Durability during unexpected system crashes?",
+      "explanation": "Evaluates core proficiency in DBMS with an emphasis on Transactions & Concurrency. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "1. Atomicity: All or nothing execution (via undo logs).\n2. Consistency: Database transitions from one valid state to another satisfying all integrity constraints.\n3. Isolation: Concurrent transactions do not interfere (isolation levels: Read Uncommitted, Read Committed, Repeatable Read, Serializable).\n4. Durability: Committed transactions persist permanently.\nWAL rule: Redo and undo log entries must be flushed to non-volatile storage before corresponding dirty data pages are written to disk.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Structure your answer around each letter of ACID with concrete examples.",
+        "For WAL, remember the core invariant: log record to disk before data block to disk."
+      ],
+      "content_hash": "f537bee997979b5ef95d8ce4925ccfa44a8eab46d758f315fba80c7cd4741536",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/dbms",
+          "source_item_id": "seed_5",
+          "discovered_at": "2026-09-26T05:47:20.296191+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.296191+00:00",
+      "updated_at": "2026-09-26T05:47:20.296191+00:00"
+    },
+    "q_54325d7bde156ff5": {
+      "id": "q_54325d7bde156ff5",
+      "category": "DBMS",
+      "subcategory": "Normalization",
+      "topic": "Boyce-Codd Normal Form",
+      "skills": [
+        "1Nf",
+        "2Nf",
+        "3Nf",
+        "Bcnf"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Medium",
+      "companies": [
+        "Amazon",
+        "Oracle",
+        "Wipro"
+      ],
+      "roles": [
+        "Database Administrator",
+        "Software Engineer"
+      ],
+      "observed_frequency": 12,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.318128+00:00",
+      "last_seen": "2026-09-26T05:47:20.318128+00:00",
+      "student_relevance": 0.71,
+      "title": "Database Normalization: 1NF to BCNF",
+      "problem_statement": "Define 1NF, 2NF, 3NF, and BCNF. Provide a scenario where a relation is in 3NF but violates BCNF, and demonstrate the lossless decomposition.",
+      "explanation": "Evaluates core proficiency in DBMS with an emphasis on Normalization. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "1NF: Atomic values; 2NF: 1NF + no partial dependency; 3NF: 2NF + no transitive dependency (for X->A, X is superkey or A is prime attribute); BCNF: for every non-trivial functional dependency X->A, X must strictly be a superkey.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Remember that 3NF allows A to be a prime attribute even if X is not a superkey; BCNF removes this relaxation."
+      ],
+      "content_hash": "54325d7bde156ff5211255a288a4adaa3b2427f01283d7cc8f98f7aa090cbfbf",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/dbms",
+          "source_item_id": "seed_6",
+          "discovered_at": "2026-09-26T05:47:20.318128+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.318128+00:00",
+      "updated_at": "2026-09-26T05:47:20.318128+00:00"
+    },
+    "q_8bc8531acbfebf8c": {
+      "id": "q_8bc8531acbfebf8c",
+      "category": "OS",
+      "subcategory": "Memory Management",
+      "topic": "Virtual Memory",
+      "skills": [
+        "Process",
+        "Paging",
+        "Virtual Memory",
+        "Page Fault",
+        "Tlb"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Medium",
+      "companies": [
+        "Cisco",
+        "Intel",
+        "NVIDIA",
+        "Qualcomm"
+      ],
+      "roles": [
+        "Software Engineer",
+        "Systems Engineer"
+      ],
+      "observed_frequency": 15,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.333045+00:00",
+      "last_seen": "2026-09-26T05:47:20.333045+00:00",
+      "student_relevance": 0.76,
+      "title": "Virtual Memory and Paging Mechanism",
+      "problem_statement": "Describe how Virtual Memory is implemented using paging. Walk through the address translation process from Virtual Address to Physical Address via the Translation Lookaside Buffer (TLB) and multi-level page tables, and explain how a page fault is handled by the OS kernel.",
+      "explanation": "Evaluates core proficiency in OS with an emphasis on Memory Management. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Virtual address split into Page Number and Offset. CPU checks TLB: if TLB hit, physical frame obtained immediately. If TLB miss, MMU walks page tables. If valid bit is 0, a page fault trap occurs: OS locates page on swap space, finds free frame (or evicts using LRU/Clock algorithm), loads page, updates page table, and restarts faulting instruction.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Differentiate between a TLB hit/miss and a Page Table valid/invalid bit check.",
+        "Mention the exact steps the OS takes during the page fault ISR (interrupt service routine)."
+      ],
+      "content_hash": "8bc8531acbfebf8c3b8280ace2b5ab16a000d18e4e61622d78f39ab683b94d89",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/os",
+          "source_item_id": "seed_7",
+          "discovered_at": "2026-09-26T05:47:20.333045+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.333045+00:00",
+      "updated_at": "2026-09-26T05:47:20.333045+00:00"
+    },
+    "q_2cecce9c2982a7b1": {
+      "id": "q_2cecce9c2982a7b1",
+      "category": "Computer Networks",
+      "subcategory": "OSI & TCP/IP",
+      "topic": "TCP Handshake",
+      "skills": [
+        "Three-Way Handshake"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Easy",
+      "companies": [
+        "Amazon",
+        "Cisco",
+        "Infosys",
+        "Swiggy"
+      ],
+      "roles": [
+        "Backend Engineer",
+        "Cloud Engineer",
+        "Systems Engineer"
+      ],
+      "observed_frequency": 20,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.346714+00:00",
+      "last_seen": "2026-09-26T05:47:20.346714+00:00",
+      "student_relevance": 0.73,
+      "title": "TCP 3-Way Handshake and 4-Way Termination",
+      "problem_statement": "Explain the TCP Three-Way Handshake used to establish a reliable connection, and the Four-Way Handshake used for graceful connection termination. What is the purpose of the TIMEWAIT state?",
+      "explanation": "Evaluates core proficiency in Computer Networks with an emphasis on OSI & TCP/IP. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Handshake: Client sends SYN(seq=x) -> Server replies SYN(seq=y)+ACK(ack=x+1) -> Client sends ACK(ack=y+1). Termination: Client sends FIN -> Server sends ACK -> Server sends FIN -> Client sends ACK. TIME_WAIT (typically 2*MSL) ensures delayed packets in transit drain and the final ACK is received by the server.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Draw or trace the sequence numbers and ACK numbers in each packet.",
+        "Explain why 2 MSL (Maximum Segment Lifetime) is needed in TIME_WAIT."
+      ],
+      "content_hash": "2cecce9c2982a7b1ab78853e2c90c9f7a5dc93fe0a71c32ecc27fb8c1359dce9",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/computer networks",
+          "source_item_id": "seed_8",
+          "discovered_at": "2026-09-26T05:47:20.346714+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.346714+00:00",
+      "updated_at": "2026-09-26T05:47:20.346714+00:00"
+    },
+    "q_4f81b1c175581d5e": {
+      "id": "q_4f81b1c175581d5e",
+      "category": "OOP",
+      "subcategory": "Design Principles",
+      "topic": "SOLID Principles",
+      "skills": [
+        "Interface",
+        "Single Responsibility",
+        "Liskov Substitution",
+        "Interface Segregation",
+        "Dependency Inversion"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Medium",
+      "companies": [
+        "Accenture",
+        "Amazon",
+        "Microsoft",
+        "TCS"
+      ],
+      "roles": [
+        "Full Stack Developer",
+        "Software Engineer"
+      ],
+      "observed_frequency": 17,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.373134+00:00",
+      "last_seen": "2026-09-26T05:47:20.373134+00:00",
+      "student_relevance": 0.76,
+      "title": "SOLID Design Principles with Code Examples",
+      "problem_statement": "Define each of the 5 SOLID design principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion. Give a concise code violation and fix for Liskov Substitution Principle (LSP).",
+      "explanation": "Evaluates core proficiency in OOP with an emphasis on Design Principles. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Classic LSP violation: Square inheriting from Rectangle where setWidth changes height. Fix: Extract common Shape interface or make Rectangle and Square independent implementations.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Remember that LSP states derived classes must be substitutable for their base classes without altering program correctness."
+      ],
+      "content_hash": "4f81b1c175581d5eb2bdb572efd3071e4c7046f8004914cd8473f0e5771d0f0a",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/oop",
+          "source_item_id": "seed_9",
+          "discovered_at": "2026-09-26T05:47:20.373134+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.373134+00:00",
+      "updated_at": "2026-09-26T05:47:20.373134+00:00"
+    },
+    "q_7278bf2dd70d7850": {
+      "id": "q_7278bf2dd70d7850",
+      "category": "Programming",
+      "subcategory": "Python",
+      "topic": "Generators",
+      "skills": [
+        "Python",
+        "Generator",
+        "Yield"
+      ],
+      "question_type": "Coding",
+      "difficulty": "Medium",
+      "companies": [
+        "Amazon",
+        "Google",
+        "Walmart Labs"
+      ],
+      "roles": [
+        "Backend Engineer",
+        "Data Engineer",
+        "Software Engineer"
+      ],
+      "observed_frequency": 13,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.390461+00:00",
+      "last_seen": "2026-09-26T05:47:20.390461+00:00",
+      "student_relevance": 0.71,
+      "title": "Python Generators and Memory Efficiency",
+      "problem_statement": "Write a Python generator function `readlargefile(filepath, chunksize)` that streams a multi-gigabyte log file in fixed chunks using `yield` without loading the full file into RAM. Explain how generators maintain execution state using generator frames.",
+      "explanation": "Evaluates core proficiency in Programming with an emphasis on Python. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Open file in context manager, read chunk_size bytes inside a while loop, yield chunk until empty string. The generator function returns a generator object pausing at yield and preserving local variable state.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Use `while True` with `f.read(chunk_size)` and break when data is empty.",
+        "Generators implement the Python iterator protocol (`__iter__` and `__next__`)."
+      ],
+      "content_hash": "7278bf2dd70d7850f90095910ba03566fa2f3805d8ce115b551cad30195fdb2a",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/programming",
+          "source_item_id": "seed_10",
+          "discovered_at": "2026-09-26T05:47:20.390461+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.390461+00:00",
+      "updated_at": "2026-09-26T05:47:20.390461+00:00"
+    },
+    "q_77351e8fca813f75": {
+      "id": "q_77351e8fca813f75",
+      "category": "Programming",
+      "subcategory": "Java",
+      "topic": "JVM Memory",
+      "skills": [
+        "Java",
+        "Jvm",
+        "Garbage Collection"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Medium",
+      "companies": [
+        "Goldman Sachs",
+        "Infosys",
+        "Morgan Stanley",
+        "Oracle"
+      ],
+      "roles": [
+        "Backend Engineer",
+        "Software Engineer"
+      ],
+      "observed_frequency": 15,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.410374+00:00",
+      "last_seen": "2026-09-26T05:47:20.410374+00:00",
+      "student_relevance": 0.76,
+      "title": "Java Garbage Collection and JVM Memory Model",
+      "problem_statement": "Explain the JVM memory model: Heap (Young Generation: Eden, S0, S1, and Old/Tenured Generation), Metaspace, and Stack. How does the G1 Garbage Collector balance throughput and low pause times?",
+      "explanation": "Evaluates core proficiency in Programming with an emphasis on Java. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Objects created in Eden. Surviving minor GC moved to Survivor (S0/S1). After age threshold (tenuring), promoted to Old Gen. G1 GC divides heap into equal regions and prioritizes regions with the most garbage ('Garbage-First') while meeting user-specified pause time targets.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Contrast Java Heap memory (shared across threads) with Java Thread Stack (isolated per thread)."
+      ],
+      "content_hash": "77351e8fca813f7599ccdf6d0af66027268f66a76668000c4a6ddb66cc96bd30",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/programming",
+          "source_item_id": "seed_11",
+          "discovered_at": "2026-09-26T05:47:20.410374+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.410374+00:00",
+      "updated_at": "2026-09-26T05:47:20.410374+00:00"
+    },
+    "q_8dab7ba1834b9e57": {
+      "id": "q_8dab7ba1834b9e57",
+      "category": "Programming",
+      "subcategory": "JavaScript",
+      "topic": "Event Loop",
+      "skills": [
+        "Javascript",
+        "Promise",
+        "Event Loop"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Medium",
+      "companies": [
+        "Flipkart",
+        "Swiggy",
+        "Uber",
+        "Zomato"
+      ],
+      "roles": [
+        "Frontend Engineer",
+        "Full Stack Developer"
+      ],
+      "observed_frequency": 16,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.431708+00:00",
+      "last_seen": "2026-09-26T05:47:20.431708+00:00",
+      "student_relevance": 0.76,
+      "title": "JavaScript Event Loop and Microtask Queue",
+      "problem_statement": "Explain the order of execution between Call Stack, Web APIs, Microtask Queue (Promises, queueMicrotask, MutationObserver), and Macrotask / Callback Queue (setTimeout, setInterval). What is the output of: console.log(1); setTimeout(() => console.log(2), 0); Promise.resolve().then(() => console.log(3)); console.log(4);",
+      "explanation": "Evaluates core proficiency in Programming with an emphasis on JavaScript. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Output is: 1, 4, 3, 2. Synchronous code executes first (1, 4). Microtasks are drained completely before the next macrotask runs, so Promise callback (3) executes next. Finally, setTimeout callback in macrotask queue executes (2).",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Microtasks always have higher priority than macrotasks.",
+        "All pending microtasks are flushed after every synchronous call stack turn."
+      ],
+      "content_hash": "8dab7ba1834b9e57eb1de413a34bda56df2f87824d2862406440e5c80272db5d",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/programming",
+          "source_item_id": "seed_12",
+          "discovered_at": "2026-09-26T05:47:20.431708+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.431708+00:00",
+      "updated_at": "2026-09-26T05:47:20.431708+00:00"
+    },
+    "q_812a9659f07585dd": {
+      "id": "q_812a9659f07585dd",
+      "category": "Aptitude",
+      "subcategory": "Quantitative",
+      "topic": "Relative Speed",
+      "skills": [],
+      "question_type": "MCQ",
+      "difficulty": "Easy",
+      "companies": [
+        "Accenture",
+        "Capgemini",
+        "Cognizant",
+        "TCS"
+      ],
+      "roles": [
+        "Associate Software Engineer",
+        "Graduate Trainee"
+      ],
+      "observed_frequency": 25,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.451662+00:00",
+      "last_seen": "2026-09-26T05:47:20.451662+00:00",
+      "student_relevance": 0.73,
+      "title": "Speed, Time, and Distance: Trains Crossing",
+      "problem_statement": "Two trains 140 m and 160 m long run at the speeds of 60 km/hr and 40 km/hr respectively in opposite directions on parallel tracks. What is the time (in seconds) taken for them to clear each other from the moment they meet?",
+      "explanation": "Evaluates core proficiency in Aptitude with an emphasis on Quantitative. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": [
+        "9 seconds",
+        "10.8 seconds",
+        "12 seconds",
+        "14.4 seconds"
+      ],
+      "correct_answer": "10.8 seconds",
+      "solution_approach": "Total distance = 140 + 160 = 300 m. Relative speed in opposite direction = 60 + 40 = 100 km/hr = 100 * (5/18) = 250/9 m/s. Time = Distance / Speed = 300 / (250/9) = 300 * 9 / 250 = 10.8 seconds.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "When moving in opposite directions, relative speed is the sum of both speeds.",
+        "Convert km/hr to m/s by multiplying by 5/18."
+      ],
+      "content_hash": "812a9659f07585ddbcb8c530904e95aa6c00f8d76b6a4112f2540fb7a81f807f",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/aptitude",
+          "source_item_id": "seed_13",
+          "discovered_at": "2026-09-26T05:47:20.451662+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.451662+00:00",
+      "updated_at": "2026-09-26T05:47:20.451662+00:00"
+    },
+    "q_1eccd510db8933f2": {
+      "id": "q_1eccd510db8933f2",
+      "category": "ML",
+      "subcategory": "Supervised Learning",
+      "topic": "Bias Variance",
+      "skills": [],
+      "question_type": "Subjective",
+      "difficulty": "Medium",
+      "companies": [
+        "Amazon",
+        "Google",
+        "Meta",
+        "Walmart Labs"
+      ],
+      "roles": [
+        "Data Scientist",
+        "Machine Learning Engineer"
+      ],
+      "observed_frequency": 14,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.469848+00:00",
+      "last_seen": "2026-09-26T05:47:20.469848+00:00",
+      "student_relevance": 0.76,
+      "title": "Bias-Variance Tradeoff and Model Generalization",
+      "problem_statement": "Explain the Bias-Variance Tradeoff in machine learning. How do high bias and high variance manifest in training vs validation errors, and what techniques reduce each?",
+      "explanation": "Evaluates core proficiency in ML with an emphasis on Supervised Learning. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Expected test error = Bias^2 + Variance + Irreducible Error. High bias (underfitting): high train and validation error -> fix by increasing model capacity, adding features, reducing regularization. High variance (overfitting): low train error but high validation error -> fix by adding data, feature selection, regularization (L1/L2), dropout, ensemble methods (bagging/Random Forests).",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Relate bias to model assumptions and variance to sensitivity to training fluctuations."
+      ],
+      "content_hash": "1eccd510db8933f24aee006bd650af52c0d6bffaf627788f865726fb4f9b9ed2",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/ml",
+          "source_item_id": "seed_14",
+          "discovered_at": "2026-09-26T05:47:20.469848+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.469848+00:00",
+      "updated_at": "2026-09-26T05:47:20.469848+00:00"
+    },
+    "q_0abd672ba0789f4e": {
+      "id": "q_0abd672ba0789f4e",
+      "category": "Data Analytics",
+      "subcategory": "Analysis & Exploration",
+      "topic": "Cohort Analysis",
+      "skills": [
+        "Pandas",
+        "Retention"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Medium",
+      "companies": [
+        "Amazon",
+        "Deloitte",
+        "EY",
+        "Swiggy"
+      ],
+      "roles": [
+        "Business Analyst",
+        "Data Analyst"
+      ],
+      "observed_frequency": 11,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.487317+00:00",
+      "last_seen": "2026-09-26T05:47:20.487317+00:00",
+      "student_relevance": 0.76,
+      "title": "Customer Cohort Retention Analysis",
+      "problem_statement": "Explain how you would calculate and interpret a Monthly Customer Retention Cohort Table using transaction records in Python/Pandas or SQL. What key insights does cohort retention reveal compared to aggregate active user metrics?",
+      "explanation": "Evaluates core proficiency in Data Analytics with an emphasis on Analysis & Exploration. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "1. Identify customer's first purchase month (CohortMonth).\n2. Tag each transaction with TransactionMonth.\n3. Compute CohortIndex = (TransactionYear - CohortYear)*12 + (TransactionMonth - CohortMonth).\n4. Pivot data: rows = CohortMonth, columns = CohortIndex, values = count of unique customer IDs divided by initial cohort size. Reveals product market fit and long-term user decay curves.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Explain why aggregate monthly active users (MAU) can hide high user churn if top-of-funnel acquisition is artificially high."
+      ],
+      "content_hash": "0abd672ba0789f4ec772d997dc23c76cbc3cc08b90aeb2aca395002b363f3889",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/data analytics",
+          "source_item_id": "seed_15",
+          "discovered_at": "2026-09-26T05:47:20.487317+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.487317+00:00",
+      "updated_at": "2026-09-26T05:47:20.487317+00:00"
+    },
+    "q_f8ac9af1e4279836": {
+      "id": "q_f8ac9af1e4279836",
+      "category": "Power BI",
+      "subcategory": "DAX & Modeling",
+      "topic": "DAX Context",
+      "skills": [
+        "Power Bi",
+        "Dax",
+        "Calculated Column",
+        "Measure"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Easy",
+      "companies": [
+        "Accenture",
+        "Deloitte",
+        "KPMG",
+        "PwC"
+      ],
+      "roles": [
+        "Business Intelligence Analyst",
+        "Power BI Developer"
+      ],
+      "observed_frequency": 15,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.505768+00:00",
+      "last_seen": "2026-09-26T05:47:20.505768+00:00",
+      "student_relevance": 0.73,
+      "title": "DAX Calculated Columns vs Measures in Power BI",
+      "problem_statement": "What is the critical architectural difference between a Calculated Column and a Measure in Power BI? Detail how Row Context and Filter Context apply to each and discuss RAM memory implications in the VertiPaq engine.",
+      "explanation": "Evaluates core proficiency in Power BI with an emphasis on DAX & Modeling. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Calculated Column evaluated at data refresh row-by-row (Row Context), stored in RAM consuming VertiPaq memory. Measure evaluated on-the-fly at query/visualization time based on slicers and user filters (Filter Context), consuming CPU without persistent RAM overhead. Best practice: use Measures whenever aggregation is needed.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Think about storage: calculated column values exist in RAM permanently; measures calculate dynamically."
+      ],
+      "content_hash": "f8ac9af1e4279836729eaef95a23ed40d3c9472f36b5693386d5346e2edef2d2",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/power bi",
+          "source_item_id": "seed_16",
+          "discovered_at": "2026-09-26T05:47:20.505768+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.505768+00:00",
+      "updated_at": "2026-09-26T05:47:20.505768+00:00"
+    },
+    "q_f2c32c978a53b7bf": {
+      "id": "q_f2c32c978a53b7bf",
+      "category": "Excel",
+      "subcategory": "Formulas & Tables",
+      "topic": "Lookup Formulas",
+      "skills": [
+        "Excel",
+        "Vlookup",
+        "Xlookup",
+        "Index Match"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Easy",
+      "companies": [
+        "Deloitte",
+        "EY",
+        "KPMG",
+        "Microsoft",
+        "PwC"
+      ],
+      "roles": [
+        "Data Analyst",
+        "Financial Analyst"
+      ],
+      "observed_frequency": 18,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.522437+00:00",
+      "last_seen": "2026-09-26T05:47:20.522437+00:00",
+      "student_relevance": 0.73,
+      "title": "INDEX MATCH vs VLOOKUP Performance and Flexibility",
+      "problem_statement": "Compare INDEX/MATCH and XLOOKUP against traditional VLOOKUP in Microsoft Excel. Why is INDEX/MATCH faster on large enterprise datasets and why does VLOOKUP break when inserting new columns?",
+      "explanation": "Evaluates core proficiency in Excel with an emphasis on Formulas & Tables. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "VLOOKUP uses hardcoded column index offsets and requires lookup key to be in the leftmost column. Inserting columns breaks the index reference. INDEX(return_range, MATCH(lookup_value, lookup_range, 0)) decouples rows and columns, allows leftward lookups, and only processes relevant memory vectors.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Explain what happens to `VLOOKUP(A2, B:E, 3, FALSE)` if a user inserts a new column C."
+      ],
+      "content_hash": "f2c32c978a53b7bf3505c0fc84b1703501357f8712c30b3fe29990e9cc1a677c",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/excel",
+          "source_item_id": "seed_17",
+          "discovered_at": "2026-09-26T05:47:20.522437+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.522437+00:00",
+      "updated_at": "2026-09-26T05:47:20.522437+00:00"
+    },
+    "q_2a04c478ded07480": {
+      "id": "q_2a04c478ded07480",
+      "category": "System Design",
+      "subcategory": "Distributed Systems",
+      "topic": "Rate Limiting",
+      "skills": [
+        "Sliding Window"
+      ],
+      "question_type": "SystemDesign",
+      "difficulty": "Hard",
+      "companies": [
+        "Amazon",
+        "Google",
+        "Swiggy",
+        "Uber"
+      ],
+      "roles": [
+        "Backend Engineer",
+        "SDE-2"
+      ],
+      "observed_frequency": 14,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.545030+00:00",
+      "last_seen": "2026-09-26T05:47:20.545030+00:00",
+      "student_relevance": 0.74,
+      "title": "Design a Distributed Rate Limiter",
+      "problem_statement": "Design a distributed rate limiter capable of enforcing tier-based API throttling (e.g., 100 requests per minute per IP or API key) across a multi-region microservice architecture. Compare the Token Bucket and Sliding Window Log algorithms, and explain how Redis with Lua scripts prevents race conditions.",
+      "explanation": "Evaluates core proficiency in System Design with an emphasis on Distributed Systems. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Use Redis cluster for centralized fast in-memory counting. Sliding Window Counter combines current and previous window weights. Redis Lua scripts guarantee atomic execution of GET and INCR operations, eliminating race conditions under high concurrent traffic. Add local client memory caching for DDoS shedding.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Why does a basic Redis `INCR` followed by `EXPIRE` create race conditions?",
+        "How do you handle clock drift across servers in distributed rate limiting?"
+      ],
+      "content_hash": "2a04c478ded07480a1e49943b58c56ff6aca0fa66e82489619b7cce39290a470",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/system design",
+          "source_item_id": "seed_18",
+          "discovered_at": "2026-09-26T05:47:20.545030+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.545030+00:00",
+      "updated_at": "2026-09-26T05:47:20.545030+00:00"
+    },
+    "q_60e0de269b1dc2cb": {
+      "id": "q_60e0de269b1dc2cb",
+      "category": "HR",
+      "subcategory": "General HR",
+      "topic": "Elevator Pitch",
+      "skills": [
+        "Tell Me About Yourself"
+      ],
+      "question_type": "Behavioral",
+      "difficulty": "Medium",
+      "companies": [
+        "Amazon",
+        "Google",
+        "Infosys",
+        "Microsoft",
+        "TCS"
+      ],
+      "roles": [
+        "All Roles"
+      ],
+      "observed_frequency": 30,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.562296+00:00",
+      "last_seen": "2026-09-26T05:47:20.562296+00:00",
+      "student_relevance": 0.76,
+      "title": "Tell Me About Yourself and Your Career Aspirations",
+      "problem_statement": "Walk me through your journey: introduce your academic background, core technical focus, top achievements, and explain why you are specifically passionate about joining our organization.",
+      "explanation": "Evaluates core proficiency in HR with an emphasis on General HR. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Use the Present-Past-Future framework:\n1. Present: Current degree, major, and technical passion.\n2. Past: 1-2 key projects, internships, or competitive achievements that demonstrate engineering rigor.\n3. Future: Why this company's scale and engineering culture align with your 3-year growth goals.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Keep response between 90 and 120 seconds.",
+        "Do not merely recite your resume chronologically\u2014focus on impact and enthusiasm."
+      ],
+      "content_hash": "60e0de269b1dc2cbe87769eee76bd64d4527fd83a48d181c32b99121cc24f823",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/hr",
+          "source_item_id": "seed_19",
+          "discovered_at": "2026-09-26T05:47:20.562296+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.562296+00:00",
+      "updated_at": "2026-09-26T05:47:20.562296+00:00"
+    },
+    "q_97c683ed53ae3281": {
+      "id": "q_97c683ed53ae3281",
+      "category": "Behavioral",
+      "subcategory": "STAR Method",
+      "topic": "Overcoming Failure",
+      "skills": [
+        "Star Method"
+      ],
+      "question_type": "Behavioral",
+      "difficulty": "Medium",
+      "companies": [
+        "Amazon",
+        "Microsoft",
+        "Uber"
+      ],
+      "roles": [
+        "All Roles"
+      ],
+      "observed_frequency": 21,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.580113+00:00",
+      "last_seen": "2026-09-26T05:47:20.580113+00:00",
+      "student_relevance": 0.71,
+      "title": "STAR Method: Handling a High-Pressure Technical Failure",
+      "problem_statement": "Describe a situation where a technical project or deployment failed or missed a critical deadline. How did you take ownership, communicate with stakeholders, and implement corrective actions?",
+      "explanation": "Evaluates core proficiency in Behavioral with an emphasis on STAR Method. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Structure response using STAR: Situation (context & stakes), Task (what you were responsible for), Action (root cause analysis, communication, fix implemented), Result (measurable outcome, lessons learned, and preventive systems created).",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Demonstrate extreme ownership: avoid blaming teammates or external circumstances.",
+        "Emphasize the post-mortem and what engineering guardrails you implemented."
+      ],
+      "content_hash": "97c683ed53ae32817e8c58b7cf1f0ebbdcad901bac80c5504a72e51a26546ce2",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/behavioral",
+          "source_item_id": "seed_20",
+          "discovered_at": "2026-09-26T05:47:20.580113+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.580113+00:00",
+      "updated_at": "2026-09-26T05:47:20.580113+00:00"
+    },
+    "q_df7760fbc3e8b148": {
+      "id": "q_df7760fbc3e8b148",
+      "category": "Project",
+      "subcategory": "Project Discussion",
+      "topic": "System Architecture",
+      "skills": [],
+      "question_type": "Subjective",
+      "difficulty": "Medium",
+      "companies": [
+        "Amazon",
+        "Flipkart",
+        "Google",
+        "Microsoft"
+      ],
+      "roles": [
+        "SDE-1",
+        "Software Engineer"
+      ],
+      "observed_frequency": 24,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.600401+00:00",
+      "last_seen": "2026-09-26T05:47:20.600401+00:00",
+      "student_relevance": 0.76,
+      "title": "Deep Dive into Major Technical Project Architecture",
+      "problem_statement": "Explain the architectural design of your most complex college or internship project. What engineering trade-offs did you make (e.g. database choice, synchronous vs asynchronous communication), what was the bottleneck, and how would you redesign it for 100x traffic?",
+      "explanation": "Evaluates core proficiency in Project with an emphasis on Project Discussion. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "State problem being solved -> High-level architecture diagram -> Justify tech stack -> Discuss 1 key bottleneck encountered -> Explain horizontal scaling, caching layer, and asynchronous task workers to achieve 100x scale.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Interviewers want to see that you understand the trade-offs of the tools you chose, not just that you followed a tutorial."
+      ],
+      "content_hash": "df7760fbc3e8b14834b311cd16afd54ade87d2919a737abcf16c334b8ef924a8",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/project",
+          "source_item_id": "seed_21",
+          "discovered_at": "2026-09-26T05:47:20.600401+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.600401+00:00",
+      "updated_at": "2026-09-26T05:47:20.600401+00:00"
+    },
+    "q_9ca4248a4674ac61": {
+      "id": "q_9ca4248a4674ac61",
+      "category": "Resume",
+      "subcategory": "Resume Walkthrough",
+      "topic": "Resume Defense",
+      "skills": [
+        "Measure"
+      ],
+      "question_type": "Subjective",
+      "difficulty": "Medium",
+      "companies": [
+        "Accenture",
+        "Amazon",
+        "Microsoft",
+        "TCS"
+      ],
+      "roles": [
+        "All Roles"
+      ],
+      "observed_frequency": 26,
+      "source_count": 1,
+      "first_seen": "2026-09-26T05:47:20.621099+00:00",
+      "last_seen": "2026-09-26T05:47:20.621099+00:00",
+      "student_relevance": 0.76,
+      "title": "Resume Deep-Dive: Justifying Skills and Metrics",
+      "problem_statement": "Pick the strongest bullet point on your resume claiming an optimization or metric (e.g. 'Improved latency by 35%'). How did you measure the baseline, what profiling tool did you use, and how did you verify the final improvement?",
+      "explanation": "Evaluates core proficiency in Resume with an emphasis on Resume Walkthrough. Interviewers seek clean problem breakdown, optimal algorithmic complexity, and edge-case handling.",
+      "options": null,
+      "correct_answer": null,
+      "solution_approach": "Define exact baseline metric -> Explain profiling methodology (e.g. Chrome DevTools, cProfile, benchmark suite) -> Detail specific code/system optimization -> Present post-optimization benchmarks with load test results.",
+      "code_snippets": {},
+      "test_cases": [
+        {
+          "input": "Sample input representative of standard case",
+          "expected_output": "Expected canonical output",
+          "is_hidden": false,
+          "explanation": "Standard test condition"
+        },
+        {
+          "input": "Boundary case (e.g. 0 or empty)",
+          "expected_output": "Expected base output",
+          "is_hidden": true,
+          "explanation": "Edge case verification"
+        }
+      ],
+      "learning_hints": [
+        "Every number on your resume is fair game. Never present estimated numbers without knowing the underlying measurement method."
+      ],
+      "content_hash": "9ca4248a4674ac619a04e76660fa46c0ea9c2e7e69c071f586a5d802928237c5",
+      "sources": [
+        {
+          "source_name": "curated_seed_bank",
+          "source_url": "https://placementos.dev/curated/resume",
+          "source_item_id": "seed_22",
+          "discovered_at": "2026-09-26T05:47:20.621099+00:00",
+          "attribution": "Discovered via curated_seed_bank"
+        }
+      ],
+      "is_active": true,
+      "created_at": "2026-09-26T05:47:20.621099+00:00",
+      "updated_at": "2026-09-26T05:47:20.621099+00:00"
+    }
+  },
+  "question_attempts": {
+    "qa_alex_attempt_01": {
+      "id": "qa_alex_attempt_01",
+      "student_id": "usr_student_demo_01",
+      "question_id": "q_01knapsack",
+      "assessment_id": "asm_amazon_mock_01",
+      "status": "PASSED",
+      "submitted_code_or_answer": "def knapSack(W, wt, val, n):\n    dp = [0] * (W + 1)\n    for i in range(n):\n        for w in range(W, wt[i] - 1, -1):\n            dp[w] = max(dp[w], val[i] + dp[w - wt[i]])\n    return dp[W]",
+      "language": "python",
+      "execution_time_ms": 42.5,
+      "memory_used_kb": 14200.0,
+      "score": 100.0,
+      "feedback": "All test cases passed. Excellent space-optimized O(W) implementation.",
+      "time_taken_seconds": 920,
+      "attempted_at": "2026-09-25T05:47:06.161413+00:00"
+    }
+  },
+  "assessments": {
+    "asm_amazon_mock_01": {
+      "id": "asm_amazon_mock_01",
+      "student_id": "usr_student_demo_01",
+      "title": "Amazon SDE-1 Comprehensive Mock Diagnostic",
+      "assessment_type": "COMPANY_MOCK",
+      "company": "Amazon",
+      "role": "SDE-1",
+      "question_ids": [
+        "q_01knapsack",
+        "q_trappingrain",
+        "q_sqltop3"
+      ],
+      "time_limit_minutes": 90,
+      "status": "COMPLETED",
+      "score": 85.0,
+      "total_questions": 3,
+      "passed_questions": 2,
+      "category_scores": {
+        "DSA": 88.0,
+        "SQL": 80.0
+      },
+      "feedback": "Strong algorithmic formulation on 0/1 Knapsack. SQL query had minor edge case regarding departments with fewer than 3 employees.",
+      "started_at": "2026-09-25T05:47:06.161413+00:00",
+      "completed_at": "2026-09-25T05:47:06.161413+00:00",
+      "created_at": "2026-09-24T05:47:06.161413+00:00"
+    }
+  },
+  "interviews": {
+    "intv_alex_mock_01": {
+      "id": "intv_alex_mock_01",
+      "student_id": "usr_student_demo_01",
+      "interview_type": "TECHNICAL",
+      "target_company": "Amazon",
+      "target_role": "SDE-1",
+      "status": "COMPLETED",
+      "duration_minutes": 45,
+      "turns": [
+        {
+          "speaker": "ai_interviewer",
+          "message": "Welcome Alex! Let's start with your technical background and then solve a dynamic programming challenge.",
+          "timestamp": "2026-09-25T05:47:06.161413+00:00"
+        },
+        {
+          "speaker": "student",
+          "message": "Hi! I'm a final-year CS undergrad focusing on high-performance distributed systems. Looking forward to the problem.",
+          "timestamp": "2026-09-25T05:47:06.161413+00:00"
+        },
+        {
+          "speaker": "ai_interviewer",
+          "message": "Great. Could you walk me through the 0/1 Knapsack problem and state your recurrence relation?",
+          "timestamp": "2026-09-25T05:47:06.161413+00:00"
+        },
+        {
+          "speaker": "student",
+          "message": "Sure. At each item i with weight wt[i] and value val[i], we either include it or exclude it. dp[i][w] = max(dp[i-1][w], val[i-1] + dp[i-1][w - wt[i-1]]).",
+          "timestamp": "2026-09-25T05:47:06.161413+00:00"
+        }
+      ],
+      "rubric_scores": {
+        "problem_solving": 8.5,
+        "technical_depth": 8.0,
+        "communication": 9.0,
+        "system_architecture": 7.0,
+        "culture_fit": 8.5
+      },
+      "overall_score": 82.5,
+      "strengths_identified": [
+        "Clear articulation of DP states",
+        "Prompt edge-case identification"
+      ],
+      "areas_for_improvement": [
+        "Elaborate on space-optimization earlier in the discussion"
+      ],
+      "detailed_feedback": "Excellent performance overall. Candidate clearly explained the DP recurrence and reduced space complexity from O(NW) to O(W).",
+      "started_at": "2026-09-25T05:47:06.161413+00:00",
+      "completed_at": "2026-09-25T05:47:06.161413+00:00",
+      "created_at": "2026-09-25T05:47:06.161413+00:00"
+    }
+  },
+  "mistakes": {
+    "m_alex_01": {
+      "id": "m_alex_01",
+      "student_id": "usr_student_demo_01",
+      "question_id": "q_sqltop3",
+      "attempt_id": "qa_alex_attempt_02",
+      "category": "SQL",
+      "subcategory": "Window Functions",
+      "mistake_type": "EdgeCase",
+      "student_notes": "Forgot that departments with tied salaries or fewer than 3 employees might cause NULL ranks.",
+      "ai_diagnosis": "Use DENSE_RANK() instead of RANK() to avoid skipping rank values when ties exist.",
+      "recommended_revision_date": "2026-09-29T05:47:06.161413+00:00",
+      "is_resolved": false,
+      "created_at": "2026-09-25T05:47:06.161413+00:00"
+    }
+  },
+  "learning_plans": {
+    "lp_sprint_60_alex": {
+      "id": "lp_sprint_60_alex",
+      "student_id": "usr_student_demo_01",
+      "title": "Amazon SDE-1 60-Day Placement Sprint",
+      "target_company": "Amazon",
+      "target_role": "SDE-1",
+      "start_date": "2026-09-24T05:47:06.161413+00:00",
+      "target_completion_date": "2026-11-10T05:47:06.161413+00:00",
+      "completion_percentage": 35.0,
+      "status": "ACTIVE",
+      "milestones": [
+        {
+          "milestone_id": "ms_01",
+          "title": "Core DSA & Knapsack Patterns",
+          "description": "Master 0/1 knapsack, unbounded knapsack, and subset sum patterns.",
+          "due_date": "2026-10-03T05:47:06.161413+00:00",
+          "is_completed": true,
+          "tasks": [
+            {
+              "task_id": "t1",
+              "title": "Solve 0/1 Knapsack",
+              "category": "DSA",
+              "is_completed": true
+            },
+            {
+              "task_id": "t2",
+              "title": "Solve Trapping Rain Water",
+              "category": "DSA",
+              "is_completed": true
+            }
+          ]
+        },
+        {
+          "milestone_id": "ms_02",
+          "title": "SQL & Transaction Concurrency",
+          "description": "Master Window functions and ACID isolation levels.",
+          "due_date": "2026-10-11T05:47:06.161413+00:00",
+          "is_completed": false,
+          "tasks": [
+            {
+              "task_id": "t3",
+              "title": "Solve Department Top Salaries in SQL",
+              "category": "SQL",
+              "is_completed": false
+            },
+            {
+              "task_id": "t4",
+              "title": "Review ACID WAL Protocol",
+              "category": "DBMS",
+              "is_completed": true
+            }
+          ]
+        }
+      ],
+      "created_at": "2026-09-24T05:47:06.161413+00:00",
+      "updated_at": "2026-09-26T05:47:06.161413+00:00"
+    }
+  },
+  "documents": {
+    "doc_resume_alex_01": {
+      "id": "doc_resume_alex_01",
+      "student_id": "usr_student_demo_01",
+      "document_type": "resume",
+      "file_name": "alex_mercer_swe_resume.pdf",
+      "mime_type": "application/pdf",
+      "file_size_bytes": 184520,
+      "gcs_bucket": "placement-os-documents.appspot.com",
+      "gcs_blob_path": "users/usr_student_demo_01/resumes/20260926_alex_mercer_swe_resume.pdf",
+      "gcs_public_url": "https://storage.googleapis.com/placement-os-documents.appspot.com/users/usr_student_demo_01/resumes/20260926_alex_mercer_swe_resume.pdf",
+      "extracted_text_preview": "Alex Mercer | NIT CSE 2026 | Full Stack & Systems Engineering. Proficient in Python, Java, Docker, React, PostgreSQL. Built high-throughput microservices...",
+      "extracted_skills": [
+        "Python",
+        "Java",
+        "PostgreSQL",
+        "Docker",
+        "FastAPI",
+        "React",
+        "Data Structures"
+      ],
+      "extracted_projects": [
+        "Distributed Rate Limiting Gateway",
+        "AI Resume Intelligence Engine"
+      ],
+      "parsing_status": "PARSED",
+      "created_at": "2026-09-24T05:47:06.161413+00:00",
+      "updated_at": "2026-09-24T05:47:06.161413+00:00"
+    },
+    "doc_project_alex_02": {
+      "id": "doc_project_alex_02",
+      "student_id": "usr_student_demo_01",
+      "document_type": "project_report",
+      "file_name": "distributed_rate_limiter_report.pdf",
+      "mime_type": "application/pdf",
+      "file_size_bytes": 452100,
+      "gcs_bucket": "placement-os-documents.appspot.com",
+      "gcs_blob_path": "users/usr_student_demo_01/project_reports/20260926_rate_limiter_report.pdf",
+      "gcs_public_url": "https://storage.googleapis.com/placement-os-documents.appspot.com/users/usr_student_demo_01/project_reports/20260926_rate_limiter_report.pdf",
+      "extracted_text_preview": "Engineering Report: Low-latency distributed rate limiter using Redis Lua scripting and sliding window counter algorithm. Evaluated under 50k RPS...",
+      "extracted_skills": [
+        "Distributed Systems",
+        "Redis",
+        "Lua",
+        "High Concurrency"
+      ],
+      "extracted_projects": [
+        "Distributed Rate Limiter"
+      ],
+      "parsing_status": "PARSED",
+      "created_at": "2026-09-25T05:47:06.161413+00:00",
+      "updated_at": "2026-09-25T05:47:06.161413+00:00"
+    }
+  },
+  "events": {
+    "evt_01": {
+      "id": "evt_01",
+      "student_id": "usr_student_demo_01",
+      "event_type": "LOGIN",
+      "payload": {
+        "ip": "127.0.0.1",
+        "device": "Chrome Windows"
+      },
+      "timestamp": "2026-09-24T05:47:06.161413+00:00"
+    },
+    "evt_02": {
+      "id": "evt_02",
+      "student_id": "usr_student_demo_01",
+      "event_type": "ASSESSMENT_COMPLETE",
+      "payload": {
+        "assessment_id": "asm_amazon_mock_01",
+        "score": 85.0
+      },
+      "timestamp": "2026-09-25T05:47:06.161413+00:00"
+    }
+  }
+}

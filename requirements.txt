@@ -1,0 +1,11 @@
+# Core placement OS data pipeline dependencies
+pydantic>=2.0.0
+google-cloud-firestore>=2.16.0
+google-cloud-storage>=2.16.0
+python-dotenv>=1.0.0
+
+# Intelligence & Text Processing
+regex>=2024.0.0
+
+# Testing & Quality
+pytest>=8.0.0

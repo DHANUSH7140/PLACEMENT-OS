@@ -1,0 +1,40 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isAllowedMimeType() {
+      return request.resource.contentType.matches('application/pdf')
+          || request.resource.contentType.matches('application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+          || request.resource.contentType.matches('application/vnd.ms-powerpoint')
+          || request.resource.contentType.matches('application/vnd.openxmlformats-officedocument.presentationml.presentation')
+          || request.resource.contentType.matches('text/plain')
+          || request.resource.contentType.matches('text/markdown');
+    }
+
+    function isUnderMaxSize() {
+      // 25MB max size limit
+      return request.resource.size < 25 * 1024 * 1024;
+    }
+
+    // Path structure: users/{userId}/{docType}/{fileName}
+    match /users/{userId}/{allPaths=**} {
+      // Only the owning student (or admin) can read their documents
+      allow read: if isOwner(userId) || request.auth.token.role == 'admin' || request.auth.token.role == 'mentor';
+      
+      // Strict upload validation: owner only, size limit, allowed mime types
+      allow write: if isOwner(userId)
+                   && isUnderMaxSize()
+                   && isAllowedMimeType();
+      
+      allow delete: if isOwner(userId) || request.auth.token.role == 'admin';
+    }
+  }
+}
