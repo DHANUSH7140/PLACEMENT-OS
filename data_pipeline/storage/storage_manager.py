@@ -42,22 +42,30 @@ MIME_TYPE_MAPPING = {
 class StorageManager:
     """Manages file validation, GCS uploads, and metadata record construction."""
 
+    _cached_client = None
+    _client_checked = False
+
     def __init__(self, bucket_name: str = GCS_STORAGE_BUCKET):
         self.bucket_name = bucket_name
-        self._gcs_client = None
+
+    @classmethod
+    def _get_client_safe(cls):
+        """Lazy-init GCS client once; avoid repeated timeout on missing credentials."""
+        if not cls._client_checked:
+            cls._client_checked = True
+            # If no GCP credentials env or project, skip slow metadata server timeout
+            if "GOOGLE_APPLICATION_CREDENTIALS" in os.environ or "K_SERVICE" in os.environ:
+                try:
+                    from google.cloud import storage
+                    cls._cached_client = storage.Client()
+                except Exception:
+                    cls._cached_client = None
+            else:
+                cls._cached_client = None
+        return cls._cached_client
 
     def _get_client(self):
-        """Lazy-init GCS client with safe fallback if offline."""
-        if self._gcs_client is None:
-            try:
-                from google.cloud import storage
-                self._gcs_client = storage.Client()
-            except Exception:
-                self._gcs_client = None
         return self._get_client_safe()
-
-    def _get_client_safe(self):
-        return self._gcs_client
 
     @classmethod
     def validate_file(cls, filename: str, doc_type: str, file_size: int, max_mb: int = 25) -> Tuple[bool, Optional[str]]:

@@ -4,6 +4,7 @@ Handles Firestore SDK connections, batch writes, collection references,
 and offline local JSON caching fallback for rapid local testing.
 """
 
+import os
 import json
 import logging
 from pathlib import Path
@@ -41,14 +42,41 @@ class FirestoreDatabase:
         }
         self._init_client()
 
+    _cached_db = None
+    _db_checked = False
+    _cached_is_offline = False
+
     def _init_client(self):
-        try:
-            from google.cloud import firestore
-            self._db = firestore.Client(project=self.project_id, database=self.database_id)
-            logger.info(f"Initialized Firestore Client for project '{self.project_id}', db '{self.database_id}'")
-        except Exception as e:
+        # Fast local detection: if not running in Cloud Run and no credentials file specified, operate offline instantly
+        has_credentials = "GOOGLE_APPLICATION_CREDENTIALS" in os.environ or "K_SERVICE" in os.environ
+        if not has_credentials:
             self._is_offline = True
-            logger.warning(f"Could not connect to live Firestore ({e}). Operating in resilient local storage mode.")
+        elif not self.__class__._db_checked:
+            self.__class__._db_checked = True
+            try:
+                from google.cloud import firestore
+                self.__class__._cached_db = firestore.Client(project=self.project_id, database=self.database_id)
+                self.__class__._cached_is_offline = False
+                logger.info(f"Initialized Firestore Client for project '{self.project_id}', db '{self.database_id}'")
+            except Exception as e:
+                self.__class__._cached_is_offline = True
+                logger.warning(f"Could not connect to live Firestore ({e}). Operating in resilient local storage mode.")
+
+        if has_credentials:
+            self._db = self.__class__._cached_db
+            self._is_offline = self.__class__._cached_is_offline
+
+        if self._is_offline:
+            # Automatically load snapshot if available
+            snapshot_path = Path(__file__).resolve().parent.parent / "seed" / "snapshots" / "firestore_snapshot.json"
+            if snapshot_path.exists():
+                try:
+                    with open(snapshot_path, "r", encoding="utf-8") as f:
+                        data = json.load(f)
+                        if isinstance(data, dict):
+                            self._offline_store.update(data)
+                except Exception:
+                    pass
 
     @property
     def is_offline(self) -> bool:

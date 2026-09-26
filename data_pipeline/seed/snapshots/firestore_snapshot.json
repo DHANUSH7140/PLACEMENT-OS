@@ -6,8 +6,8 @@
       "display_name": "Alex Mercer",
       "photo_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
       "role": "student",
-      "created_at": "2026-09-24T05:47:06.161413+00:00",
-      "last_login": "2026-09-26T05:47:06.161413+00:00",
+      "created_at": "2026-09-24T06:14:31.310444+00:00",
+      "last_login": "2026-09-26T06:14:31.310444+00:00",
       "is_active": true
     },
     "usr_mentor_demo_02": {
@@ -16,8 +16,8 @@
       "display_name": "Sarah Jenkins",
       "photo_url": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
       "role": "mentor",
-      "created_at": "2026-09-24T05:47:06.161413+00:00",
-      "last_login": "2026-09-26T05:47:06.161413+00:00",
+      "created_at": "2026-09-24T06:14:31.310444+00:00",
+      "last_login": "2026-09-26T06:14:31.310444+00:00",
       "is_active": true
     }
   },
@@ -69,8 +69,8 @@
       ],
       "resume_document_id": "doc_resume_alex_01",
       "active_learning_plan_id": "lp_sprint_60_alex",
-      "created_at": "2026-09-24T05:47:06.161413+00:00",
-      "updated_at": "2026-09-26T05:47:06.161413+00:00"
+      "created_at": "2026-09-24T06:14:31.310444+00:00",
+      "updated_at": "2026-09-26T06:14:31.310444+00:00"
     }
   },
   "questions": {
@@ -96,8 +96,8 @@
       ],
       "observed_frequency": 14,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.206834+00:00",
-      "last_seen": "2026-09-26T05:47:20.206834+00:00",
+      "first_seen": "2026-09-26T06:14:44.585369+00:00",
+      "last_seen": "2026-09-26T06:14:44.585369+00:00",
       "student_relevance": 0.76,
       "title": "0/1 Knapsack Problem",
       "problem_statement": "Given weights and values of N items, put these items in a knapsack of capacity W to get the maximum total value in the knapsack. Each item can either be selected entirely or not at all (0-1 property). Return the maximum value achievable.",
@@ -131,13 +131,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/dsa",
           "source_item_id": "seed_0",
-          "discovered_at": "2026-09-26T05:47:20.206834+00:00",
+          "discovered_at": "2026-09-26T06:14:44.585369+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.206834+00:00",
-      "updated_at": "2026-09-26T05:47:20.206834+00:00"
+      "created_at": "2026-09-26T06:14:44.585369+00:00",
+      "updated_at": "2026-09-26T06:14:44.585369+00:00"
     },
     "q_2771a4df639a5b28": {
       "id": "q_2771a4df639a5b28",
@@ -158,8 +158,8 @@
       ],
       "observed_frequency": 19,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.226558+00:00",
-      "last_seen": "2026-09-26T05:47:20.226558+00:00",
+      "first_seen": "2026-09-26T06:14:44.684735+00:00",
+      "last_seen": "2026-09-26T06:14:44.684735+00:00",
       "student_relevance": 0.69,
       "title": "Trapping Rain Water",
       "problem_statement": "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
@@ -192,13 +192,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/dsa",
           "source_item_id": "seed_1",
-          "discovered_at": "2026-09-26T05:47:20.226558+00:00",
+          "discovered_at": "2026-09-26T06:14:44.684735+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.226558+00:00",
-      "updated_at": "2026-09-26T05:47:20.226558+00:00"
+      "created_at": "2026-09-26T06:14:44.684735+00:00",
+      "updated_at": "2026-09-26T06:14:44.684735+00:00"
     },
     "q_e36110a383bcbd8b": {
       "id": "q_e36110a383bcbd8b",
@@ -222,8 +222,8 @@
       ],
       "observed_frequency": 11,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.243235+00:00",
-      "last_seen": "2026-09-26T05:47:20.243235+00:00",
+      "first_seen": "2026-09-26T06:14:44.785068+00:00",
+      "last_seen": "2026-09-26T06:14:44.785068+00:00",
       "student_relevance": 0.69,
       "title": "Reverse Linked List in K-Group",
       "problem_statement": "Given the head of a linked list, reverse the nodes of the list k at a time, and return the modified list. If the number of nodes is not a multiple of k, left-out nodes at the end should remain as-is.",
@@ -256,13 +256,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/dsa",
           "source_item_id": "seed_2",
-          "discovered_at": "2026-09-26T05:47:20.243235+00:00",
+          "discovered_at": "2026-09-26T06:14:44.785068+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.243235+00:00",
-      "updated_at": "2026-09-26T05:47:20.243235+00:00"
+      "created_at": "2026-09-26T06:14:44.785068+00:00",
+      "updated_at": "2026-09-26T06:14:44.785068+00:00"
     },
     "q_cf3e0f324623c780": {
       "id": "q_cf3e0f324623c780",
@@ -284,8 +284,8 @@
       ],
       "observed_frequency": 16,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.265451+00:00",
-      "last_seen": "2026-09-26T05:47:20.265451+00:00",
+      "first_seen": "2026-09-26T06:14:44.884577+00:00",
+      "last_seen": "2026-09-26T06:14:44.884577+00:00",
       "student_relevance": 0.74,
       "title": "Department Top Three Salaries",
       "problem_statement": "A company's executives are interested in seeing who earns the most money in each of the company's departments. A high earner in a department is an employee who has a salary in the top three unique salaries for that department. Write a solution to find the employees who are high earners in each of the departments.",
@@ -318,13 +318,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/sql",
           "source_item_id": "seed_3",
-          "discovered_at": "2026-09-26T05:47:20.265451+00:00",
+          "discovered_at": "2026-09-26T06:14:44.884577+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.265451+00:00",
-      "updated_at": "2026-09-26T05:47:20.265451+00:00"
+      "created_at": "2026-09-26T06:14:44.884577+00:00",
+      "updated_at": "2026-09-26T06:14:44.884577+00:00"
     },
     "q_77b93ed20cbe282e": {
       "id": "q_77b93ed20cbe282e",
@@ -346,8 +346,8 @@
       ],
       "observed_frequency": 22,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.279448+00:00",
-      "last_seen": "2026-09-26T05:47:20.279448+00:00",
+      "first_seen": "2026-09-26T06:14:44.979162+00:00",
+      "last_seen": "2026-09-26T06:14:44.979162+00:00",
       "student_relevance": 0.76,
       "title": "Second Highest Salary",
       "problem_statement": "Write a SQL query to report the second highest distinct salary from the Employee table. If there is no second highest salary, the query should report null.",
@@ -380,13 +380,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/sql",
           "source_item_id": "seed_4",
-          "discovered_at": "2026-09-26T05:47:20.279448+00:00",
+          "discovered_at": "2026-09-26T06:14:44.979162+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.279448+00:00",
-      "updated_at": "2026-09-26T05:47:20.279448+00:00"
+      "created_at": "2026-09-26T06:14:44.979162+00:00",
+      "updated_at": "2026-09-26T06:14:44.979162+00:00"
     },
     "q_f537bee997979b5e": {
       "id": "q_f537bee997979b5e",
@@ -413,8 +413,8 @@
       ],
       "observed_frequency": 18,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.296191+00:00",
-      "last_seen": "2026-09-26T05:47:20.296191+00:00",
+      "first_seen": "2026-09-26T06:14:45.067837+00:00",
+      "last_seen": "2026-09-26T06:14:45.067837+00:00",
       "student_relevance": 0.73,
       "title": "Explain ACID Properties and WAL Protocol",
       "problem_statement": "Explain the four ACID properties in relational database management systems. How does Write-Ahead Logging (WAL) ensure Atomicity and Durability during unexpected system crashes?",
@@ -447,13 +447,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/dbms",
           "source_item_id": "seed_5",
-          "discovered_at": "2026-09-26T05:47:20.296191+00:00",
+          "discovered_at": "2026-09-26T06:14:45.067837+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.296191+00:00",
-      "updated_at": "2026-09-26T05:47:20.296191+00:00"
+      "created_at": "2026-09-26T06:14:45.067837+00:00",
+      "updated_at": "2026-09-26T06:14:45.067837+00:00"
     },
     "q_54325d7bde156ff5": {
       "id": "q_54325d7bde156ff5",
@@ -479,8 +479,8 @@
       ],
       "observed_frequency": 12,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.318128+00:00",
-      "last_seen": "2026-09-26T05:47:20.318128+00:00",
+      "first_seen": "2026-09-26T06:14:45.171103+00:00",
+      "last_seen": "2026-09-26T06:14:45.171103+00:00",
       "student_relevance": 0.71,
       "title": "Database Normalization: 1NF to BCNF",
       "problem_statement": "Define 1NF, 2NF, 3NF, and BCNF. Provide a scenario where a relation is in 3NF but violates BCNF, and demonstrate the lossless decomposition.",
@@ -512,13 +512,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/dbms",
           "source_item_id": "seed_6",
-          "discovered_at": "2026-09-26T05:47:20.318128+00:00",
+          "discovered_at": "2026-09-26T06:14:45.171103+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.318128+00:00",
-      "updated_at": "2026-09-26T05:47:20.318128+00:00"
+      "created_at": "2026-09-26T06:14:45.171103+00:00",
+      "updated_at": "2026-09-26T06:14:45.171103+00:00"
     },
     "q_8bc8531acbfebf8c": {
       "id": "q_8bc8531acbfebf8c",
@@ -546,8 +546,8 @@
       ],
       "observed_frequency": 15,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.333045+00:00",
-      "last_seen": "2026-09-26T05:47:20.333045+00:00",
+      "first_seen": "2026-09-26T06:14:45.264721+00:00",
+      "last_seen": "2026-09-26T06:14:45.264721+00:00",
       "student_relevance": 0.76,
       "title": "Virtual Memory and Paging Mechanism",
       "problem_statement": "Describe how Virtual Memory is implemented using paging. Walk through the address translation process from Virtual Address to Physical Address via the Translation Lookaside Buffer (TLB) and multi-level page tables, and explain how a page fault is handled by the OS kernel.",
@@ -580,13 +580,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/os",
           "source_item_id": "seed_7",
-          "discovered_at": "2026-09-26T05:47:20.333045+00:00",
+          "discovered_at": "2026-09-26T06:14:45.264721+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.333045+00:00",
-      "updated_at": "2026-09-26T05:47:20.333045+00:00"
+      "created_at": "2026-09-26T06:14:45.264721+00:00",
+      "updated_at": "2026-09-26T06:14:45.264721+00:00"
     },
     "q_2cecce9c2982a7b1": {
       "id": "q_2cecce9c2982a7b1",
@@ -611,8 +611,8 @@
       ],
       "observed_frequency": 20,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.346714+00:00",
-      "last_seen": "2026-09-26T05:47:20.346714+00:00",
+      "first_seen": "2026-09-26T06:14:45.353970+00:00",
+      "last_seen": "2026-09-26T06:14:45.353970+00:00",
       "student_relevance": 0.73,
       "title": "TCP 3-Way Handshake and 4-Way Termination",
       "problem_statement": "Explain the TCP Three-Way Handshake used to establish a reliable connection, and the Four-Way Handshake used for graceful connection termination. What is the purpose of the TIMEWAIT state?",
@@ -645,13 +645,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/computer networks",
           "source_item_id": "seed_8",
-          "discovered_at": "2026-09-26T05:47:20.346714+00:00",
+          "discovered_at": "2026-09-26T06:14:45.353970+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.346714+00:00",
-      "updated_at": "2026-09-26T05:47:20.346714+00:00"
+      "created_at": "2026-09-26T06:14:45.353970+00:00",
+      "updated_at": "2026-09-26T06:14:45.353970+00:00"
     },
     "q_4f81b1c175581d5e": {
       "id": "q_4f81b1c175581d5e",
@@ -679,8 +679,8 @@
       ],
       "observed_frequency": 17,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.373134+00:00",
-      "last_seen": "2026-09-26T05:47:20.373134+00:00",
+      "first_seen": "2026-09-26T06:14:45.451385+00:00",
+      "last_seen": "2026-09-26T06:14:45.451385+00:00",
       "student_relevance": 0.76,
       "title": "SOLID Design Principles with Code Examples",
       "problem_statement": "Define each of the 5 SOLID design principles: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion. Give a concise code violation and fix for Liskov Substitution Principle (LSP).",
@@ -712,13 +712,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/oop",
           "source_item_id": "seed_9",
-          "discovered_at": "2026-09-26T05:47:20.373134+00:00",
+          "discovered_at": "2026-09-26T06:14:45.451385+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.373134+00:00",
-      "updated_at": "2026-09-26T05:47:20.373134+00:00"
+      "created_at": "2026-09-26T06:14:45.451385+00:00",
+      "updated_at": "2026-09-26T06:14:45.451385+00:00"
     },
     "q_7278bf2dd70d7850": {
       "id": "q_7278bf2dd70d7850",
@@ -744,8 +744,8 @@
       ],
       "observed_frequency": 13,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.390461+00:00",
-      "last_seen": "2026-09-26T05:47:20.390461+00:00",
+      "first_seen": "2026-09-26T06:14:45.543777+00:00",
+      "last_seen": "2026-09-26T06:14:45.543777+00:00",
       "student_relevance": 0.71,
       "title": "Python Generators and Memory Efficiency",
       "problem_statement": "Write a Python generator function `readlargefile(filepath, chunksize)` that streams a multi-gigabyte log file in fixed chunks using `yield` without loading the full file into RAM. Explain how generators maintain execution state using generator frames.",
@@ -778,13 +778,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/programming",
           "source_item_id": "seed_10",
-          "discovered_at": "2026-09-26T05:47:20.390461+00:00",
+          "discovered_at": "2026-09-26T06:14:45.543777+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.390461+00:00",
-      "updated_at": "2026-09-26T05:47:20.390461+00:00"
+      "created_at": "2026-09-26T06:14:45.543777+00:00",
+      "updated_at": "2026-09-26T06:14:45.543777+00:00"
     },
     "q_77351e8fca813f75": {
       "id": "q_77351e8fca813f75",
@@ -810,8 +810,8 @@
       ],
       "observed_frequency": 15,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.410374+00:00",
-      "last_seen": "2026-09-26T05:47:20.410374+00:00",
+      "first_seen": "2026-09-26T06:14:45.634495+00:00",
+      "last_seen": "2026-09-26T06:14:45.634495+00:00",
       "student_relevance": 0.76,
       "title": "Java Garbage Collection and JVM Memory Model",
       "problem_statement": "Explain the JVM memory model: Heap (Young Generation: Eden, S0, S1, and Old/Tenured Generation), Metaspace, and Stack. How does the G1 Garbage Collector balance throughput and low pause times?",
@@ -843,13 +843,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/programming",
           "source_item_id": "seed_11",
-          "discovered_at": "2026-09-26T05:47:20.410374+00:00",
+          "discovered_at": "2026-09-26T06:14:45.634495+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.410374+00:00",
-      "updated_at": "2026-09-26T05:47:20.410374+00:00"
+      "created_at": "2026-09-26T06:14:45.634495+00:00",
+      "updated_at": "2026-09-26T06:14:45.634495+00:00"
     },
     "q_8dab7ba1834b9e57": {
       "id": "q_8dab7ba1834b9e57",
@@ -875,8 +875,8 @@
       ],
       "observed_frequency": 16,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.431708+00:00",
-      "last_seen": "2026-09-26T05:47:20.431708+00:00",
+      "first_seen": "2026-09-26T06:14:45.734492+00:00",
+      "last_seen": "2026-09-26T06:14:45.734492+00:00",
       "student_relevance": 0.76,
       "title": "JavaScript Event Loop and Microtask Queue",
       "problem_statement": "Explain the order of execution between Call Stack, Web APIs, Microtask Queue (Promises, queueMicrotask, MutationObserver), and Macrotask / Callback Queue (setTimeout, setInterval). What is the output of: console.log(1); setTimeout(() => console.log(2), 0); Promise.resolve().then(() => console.log(3)); console.log(4);",
@@ -909,13 +909,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/programming",
           "source_item_id": "seed_12",
-          "discovered_at": "2026-09-26T05:47:20.431708+00:00",
+          "discovered_at": "2026-09-26T06:14:45.734492+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.431708+00:00",
-      "updated_at": "2026-09-26T05:47:20.431708+00:00"
+      "created_at": "2026-09-26T06:14:45.734492+00:00",
+      "updated_at": "2026-09-26T06:14:45.734492+00:00"
     },
     "q_812a9659f07585dd": {
       "id": "q_812a9659f07585dd",
@@ -937,8 +937,8 @@
       ],
       "observed_frequency": 25,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.451662+00:00",
-      "last_seen": "2026-09-26T05:47:20.451662+00:00",
+      "first_seen": "2026-09-26T06:14:45.834836+00:00",
+      "last_seen": "2026-09-26T06:14:45.834836+00:00",
       "student_relevance": 0.73,
       "title": "Speed, Time, and Distance: Trains Crossing",
       "problem_statement": "Two trains 140 m and 160 m long run at the speeds of 60 km/hr and 40 km/hr respectively in opposite directions on parallel tracks. What is the time (in seconds) taken for them to clear each other from the moment they meet?",
@@ -976,13 +976,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/aptitude",
           "source_item_id": "seed_13",
-          "discovered_at": "2026-09-26T05:47:20.451662+00:00",
+          "discovered_at": "2026-09-26T06:14:45.834836+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.451662+00:00",
-      "updated_at": "2026-09-26T05:47:20.451662+00:00"
+      "created_at": "2026-09-26T06:14:45.834836+00:00",
+      "updated_at": "2026-09-26T06:14:45.834836+00:00"
     },
     "q_1eccd510db8933f2": {
       "id": "q_1eccd510db8933f2",
@@ -1004,8 +1004,8 @@
       ],
       "observed_frequency": 14,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.469848+00:00",
-      "last_seen": "2026-09-26T05:47:20.469848+00:00",
+      "first_seen": "2026-09-26T06:14:45.934565+00:00",
+      "last_seen": "2026-09-26T06:14:45.934565+00:00",
       "student_relevance": 0.76,
       "title": "Bias-Variance Tradeoff and Model Generalization",
       "problem_statement": "Explain the Bias-Variance Tradeoff in machine learning. How do high bias and high variance manifest in training vs validation errors, and what techniques reduce each?",
@@ -1037,13 +1037,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/ml",
           "source_item_id": "seed_14",
-          "discovered_at": "2026-09-26T05:47:20.469848+00:00",
+          "discovered_at": "2026-09-26T06:14:45.934565+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.469848+00:00",
-      "updated_at": "2026-09-26T05:47:20.469848+00:00"
+      "created_at": "2026-09-26T06:14:45.934565+00:00",
+      "updated_at": "2026-09-26T06:14:45.934565+00:00"
     },
     "q_0abd672ba0789f4e": {
       "id": "q_0abd672ba0789f4e",
@@ -1068,8 +1068,8 @@
       ],
       "observed_frequency": 11,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.487317+00:00",
-      "last_seen": "2026-09-26T05:47:20.487317+00:00",
+      "first_seen": "2026-09-26T06:14:46.017940+00:00",
+      "last_seen": "2026-09-26T06:14:46.017940+00:00",
       "student_relevance": 0.76,
       "title": "Customer Cohort Retention Analysis",
       "problem_statement": "Explain how you would calculate and interpret a Monthly Customer Retention Cohort Table using transaction records in Python/Pandas or SQL. What key insights does cohort retention reveal compared to aggregate active user metrics?",
@@ -1101,13 +1101,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/data analytics",
           "source_item_id": "seed_15",
-          "discovered_at": "2026-09-26T05:47:20.487317+00:00",
+          "discovered_at": "2026-09-26T06:14:46.017940+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.487317+00:00",
-      "updated_at": "2026-09-26T05:47:20.487317+00:00"
+      "created_at": "2026-09-26T06:14:46.017940+00:00",
+      "updated_at": "2026-09-26T06:14:46.017940+00:00"
     },
     "q_f8ac9af1e4279836": {
       "id": "q_f8ac9af1e4279836",
@@ -1134,8 +1134,8 @@
       ],
       "observed_frequency": 15,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.505768+00:00",
-      "last_seen": "2026-09-26T05:47:20.505768+00:00",
+      "first_seen": "2026-09-26T06:14:46.118751+00:00",
+      "last_seen": "2026-09-26T06:14:46.118751+00:00",
       "student_relevance": 0.73,
       "title": "DAX Calculated Columns vs Measures in Power BI",
       "problem_statement": "What is the critical architectural difference between a Calculated Column and a Measure in Power BI? Detail how Row Context and Filter Context apply to each and discuss RAM memory implications in the VertiPaq engine.",
@@ -1167,13 +1167,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/power bi",
           "source_item_id": "seed_16",
-          "discovered_at": "2026-09-26T05:47:20.505768+00:00",
+          "discovered_at": "2026-09-26T06:14:46.118751+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.505768+00:00",
-      "updated_at": "2026-09-26T05:47:20.505768+00:00"
+      "created_at": "2026-09-26T06:14:46.118751+00:00",
+      "updated_at": "2026-09-26T06:14:46.118751+00:00"
     },
     "q_f2c32c978a53b7bf": {
       "id": "q_f2c32c978a53b7bf",
@@ -1201,8 +1201,8 @@
       ],
       "observed_frequency": 18,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.522437+00:00",
-      "last_seen": "2026-09-26T05:47:20.522437+00:00",
+      "first_seen": "2026-09-26T06:14:46.201167+00:00",
+      "last_seen": "2026-09-26T06:14:46.201167+00:00",
       "student_relevance": 0.73,
       "title": "INDEX MATCH vs VLOOKUP Performance and Flexibility",
       "problem_statement": "Compare INDEX/MATCH and XLOOKUP against traditional VLOOKUP in Microsoft Excel. Why is INDEX/MATCH faster on large enterprise datasets and why does VLOOKUP break when inserting new columns?",
@@ -1234,13 +1234,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/excel",
           "source_item_id": "seed_17",
-          "discovered_at": "2026-09-26T05:47:20.522437+00:00",
+          "discovered_at": "2026-09-26T06:14:46.201167+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.522437+00:00",
-      "updated_at": "2026-09-26T05:47:20.522437+00:00"
+      "created_at": "2026-09-26T06:14:46.201167+00:00",
+      "updated_at": "2026-09-26T06:14:46.201167+00:00"
     },
     "q_2a04c478ded07480": {
       "id": "q_2a04c478ded07480",
@@ -1264,8 +1264,8 @@
       ],
       "observed_frequency": 14,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.545030+00:00",
-      "last_seen": "2026-09-26T05:47:20.545030+00:00",
+      "first_seen": "2026-09-26T06:14:46.284496+00:00",
+      "last_seen": "2026-09-26T06:14:46.284496+00:00",
       "student_relevance": 0.74,
       "title": "Design a Distributed Rate Limiter",
       "problem_statement": "Design a distributed rate limiter capable of enforcing tier-based API throttling (e.g., 100 requests per minute per IP or API key) across a multi-region microservice architecture. Compare the Token Bucket and Sliding Window Log algorithms, and explain how Redis with Lua scripts prevents race conditions.",
@@ -1298,13 +1298,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/system design",
           "source_item_id": "seed_18",
-          "discovered_at": "2026-09-26T05:47:20.545030+00:00",
+          "discovered_at": "2026-09-26T06:14:46.284496+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.545030+00:00",
-      "updated_at": "2026-09-26T05:47:20.545030+00:00"
+      "created_at": "2026-09-26T06:14:46.284496+00:00",
+      "updated_at": "2026-09-26T06:14:46.284496+00:00"
     },
     "q_60e0de269b1dc2cb": {
       "id": "q_60e0de269b1dc2cb",
@@ -1328,8 +1328,8 @@
       ],
       "observed_frequency": 30,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.562296+00:00",
-      "last_seen": "2026-09-26T05:47:20.562296+00:00",
+      "first_seen": "2026-09-26T06:14:46.381683+00:00",
+      "last_seen": "2026-09-26T06:14:46.381683+00:00",
       "student_relevance": 0.76,
       "title": "Tell Me About Yourself and Your Career Aspirations",
       "problem_statement": "Walk me through your journey: introduce your academic background, core technical focus, top achievements, and explain why you are specifically passionate about joining our organization.",
@@ -1362,13 +1362,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/hr",
           "source_item_id": "seed_19",
-          "discovered_at": "2026-09-26T05:47:20.562296+00:00",
+          "discovered_at": "2026-09-26T06:14:46.381683+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.562296+00:00",
-      "updated_at": "2026-09-26T05:47:20.562296+00:00"
+      "created_at": "2026-09-26T06:14:46.381683+00:00",
+      "updated_at": "2026-09-26T06:14:46.381683+00:00"
     },
     "q_97c683ed53ae3281": {
       "id": "q_97c683ed53ae3281",
@@ -1390,8 +1390,8 @@
       ],
       "observed_frequency": 21,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.580113+00:00",
-      "last_seen": "2026-09-26T05:47:20.580113+00:00",
+      "first_seen": "2026-09-26T06:14:46.467888+00:00",
+      "last_seen": "2026-09-26T06:14:46.467888+00:00",
       "student_relevance": 0.71,
       "title": "STAR Method: Handling a High-Pressure Technical Failure",
       "problem_statement": "Describe a situation where a technical project or deployment failed or missed a critical deadline. How did you take ownership, communicate with stakeholders, and implement corrective actions?",
@@ -1424,13 +1424,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/behavioral",
           "source_item_id": "seed_20",
-          "discovered_at": "2026-09-26T05:47:20.580113+00:00",
+          "discovered_at": "2026-09-26T06:14:46.467888+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.580113+00:00",
-      "updated_at": "2026-09-26T05:47:20.580113+00:00"
+      "created_at": "2026-09-26T06:14:46.467888+00:00",
+      "updated_at": "2026-09-26T06:14:46.467888+00:00"
     },
     "q_df7760fbc3e8b148": {
       "id": "q_df7760fbc3e8b148",
@@ -1452,8 +1452,8 @@
       ],
       "observed_frequency": 24,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.600401+00:00",
-      "last_seen": "2026-09-26T05:47:20.600401+00:00",
+      "first_seen": "2026-09-26T06:14:46.567665+00:00",
+      "last_seen": "2026-09-26T06:14:46.567665+00:00",
       "student_relevance": 0.76,
       "title": "Deep Dive into Major Technical Project Architecture",
       "problem_statement": "Explain the architectural design of your most complex college or internship project. What engineering trade-offs did you make (e.g. database choice, synchronous vs asynchronous communication), what was the bottleneck, and how would you redesign it for 100x traffic?",
@@ -1485,13 +1485,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/project",
           "source_item_id": "seed_21",
-          "discovered_at": "2026-09-26T05:47:20.600401+00:00",
+          "discovered_at": "2026-09-26T06:14:46.567665+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.600401+00:00",
-      "updated_at": "2026-09-26T05:47:20.600401+00:00"
+      "created_at": "2026-09-26T06:14:46.567665+00:00",
+      "updated_at": "2026-09-26T06:14:46.567665+00:00"
     },
     "q_9ca4248a4674ac61": {
       "id": "q_9ca4248a4674ac61",
@@ -1514,8 +1514,8 @@
       ],
       "observed_frequency": 26,
       "source_count": 1,
-      "first_seen": "2026-09-26T05:47:20.621099+00:00",
-      "last_seen": "2026-09-26T05:47:20.621099+00:00",
+      "first_seen": "2026-09-26T06:14:46.670956+00:00",
+      "last_seen": "2026-09-26T06:14:46.670956+00:00",
       "student_relevance": 0.76,
       "title": "Resume Deep-Dive: Justifying Skills and Metrics",
       "problem_statement": "Pick the strongest bullet point on your resume claiming an optimization or metric (e.g. 'Improved latency by 35%'). How did you measure the baseline, what profiling tool did you use, and how did you verify the final improvement?",
@@ -1547,13 +1547,13 @@
           "source_name": "curated_seed_bank",
           "source_url": "https://placementos.dev/curated/resume",
           "source_item_id": "seed_22",
-          "discovered_at": "2026-09-26T05:47:20.621099+00:00",
+          "discovered_at": "2026-09-26T06:14:46.670956+00:00",
           "attribution": "Discovered via curated_seed_bank"
         }
       ],
       "is_active": true,
-      "created_at": "2026-09-26T05:47:20.621099+00:00",
-      "updated_at": "2026-09-26T05:47:20.621099+00:00"
+      "created_at": "2026-09-26T06:14:46.670956+00:00",
+      "updated_at": "2026-09-26T06:14:46.670956+00:00"
     }
   },
   "question_attempts": {
@@ -1570,7 +1570,7 @@
       "score": 100.0,
       "feedback": "All test cases passed. Excellent space-optimized O(W) implementation.",
       "time_taken_seconds": 920,
-      "attempted_at": "2026-09-25T05:47:06.161413+00:00"
+      "attempted_at": "2026-09-25T06:14:31.310444+00:00"
     }
   },
   "assessments": {
@@ -1596,9 +1596,9 @@
         "SQL": 80.0
       },
       "feedback": "Strong algorithmic formulation on 0/1 Knapsack. SQL query had minor edge case regarding departments with fewer than 3 employees.",
-      "started_at": "2026-09-25T05:47:06.161413+00:00",
-      "completed_at": "2026-09-25T05:47:06.161413+00:00",
-      "created_at": "2026-09-24T05:47:06.161413+00:00"
+      "started_at": "2026-09-25T06:14:31.310444+00:00",
+      "completed_at": "2026-09-25T06:14:31.310444+00:00",
+      "created_at": "2026-09-24T06:14:31.310444+00:00"
     }
   },
   "interviews": {
@@ -1614,22 +1614,22 @@
         {
           "speaker": "ai_interviewer",
           "message": "Welcome Alex! Let's start with your technical background and then solve a dynamic programming challenge.",
-          "timestamp": "2026-09-25T05:47:06.161413+00:00"
+          "timestamp": "2026-09-25T06:14:31.310444+00:00"
         },
         {
           "speaker": "student",
           "message": "Hi! I'm a final-year CS undergrad focusing on high-performance distributed systems. Looking forward to the problem.",
-          "timestamp": "2026-09-25T05:47:06.161413+00:00"
+          "timestamp": "2026-09-25T06:14:31.310444+00:00"
         },
         {
           "speaker": "ai_interviewer",
           "message": "Great. Could you walk me through the 0/1 Knapsack problem and state your recurrence relation?",
-          "timestamp": "2026-09-25T05:47:06.161413+00:00"
+          "timestamp": "2026-09-25T06:14:31.310444+00:00"
         },
         {
           "speaker": "student",
           "message": "Sure. At each item i with weight wt[i] and value val[i], we either include it or exclude it. dp[i][w] = max(dp[i-1][w], val[i-1] + dp[i-1][w - wt[i-1]]).",
-          "timestamp": "2026-09-25T05:47:06.161413+00:00"
+          "timestamp": "2026-09-25T06:14:31.310444+00:00"
         }
       ],
       "rubric_scores": {
@@ -1648,9 +1648,9 @@
         "Elaborate on space-optimization earlier in the discussion"
       ],
       "detailed_feedback": "Excellent performance overall. Candidate clearly explained the DP recurrence and reduced space complexity from O(NW) to O(W).",
-      "started_at": "2026-09-25T05:47:06.161413+00:00",
-      "completed_at": "2026-09-25T05:47:06.161413+00:00",
-      "created_at": "2026-09-25T05:47:06.161413+00:00"
+      "started_at": "2026-09-25T06:14:31.310444+00:00",
+      "completed_at": "2026-09-25T06:14:31.310444+00:00",
+      "created_at": "2026-09-25T06:14:31.310444+00:00"
     }
   },
   "mistakes": {
@@ -1664,9 +1664,9 @@
       "mistake_type": "EdgeCase",
       "student_notes": "Forgot that departments with tied salaries or fewer than 3 employees might cause NULL ranks.",
       "ai_diagnosis": "Use DENSE_RANK() instead of RANK() to avoid skipping rank values when ties exist.",
-      "recommended_revision_date": "2026-09-29T05:47:06.161413+00:00",
+      "recommended_revision_date": "2026-09-29T06:14:31.310444+00:00",
       "is_resolved": false,
-      "created_at": "2026-09-25T05:47:06.161413+00:00"
+      "created_at": "2026-09-25T06:14:31.310444+00:00"
     }
   },
   "learning_plans": {
@@ -1676,8 +1676,8 @@
       "title": "Amazon SDE-1 60-Day Placement Sprint",
       "target_company": "Amazon",
       "target_role": "SDE-1",
-      "start_date": "2026-09-24T05:47:06.161413+00:00",
-      "target_completion_date": "2026-11-10T05:47:06.161413+00:00",
+      "start_date": "2026-09-24T06:14:31.310444+00:00",
+      "target_completion_date": "2026-11-10T06:14:31.310444+00:00",
       "completion_percentage": 35.0,
       "status": "ACTIVE",
       "milestones": [
@@ -1685,7 +1685,7 @@
           "milestone_id": "ms_01",
           "title": "Core DSA & Knapsack Patterns",
           "description": "Master 0/1 knapsack, unbounded knapsack, and subset sum patterns.",
-          "due_date": "2026-10-03T05:47:06.161413+00:00",
+          "due_date": "2026-10-03T06:14:31.310444+00:00",
           "is_completed": true,
           "tasks": [
             {
@@ -1706,7 +1706,7 @@
           "milestone_id": "ms_02",
           "title": "SQL & Transaction Concurrency",
           "description": "Master Window functions and ACID isolation levels.",
-          "due_date": "2026-10-11T05:47:06.161413+00:00",
+          "due_date": "2026-10-11T06:14:31.310444+00:00",
           "is_completed": false,
           "tasks": [
             {
@@ -1724,8 +1724,8 @@
           ]
         }
       ],
-      "created_at": "2026-09-24T05:47:06.161413+00:00",
-      "updated_at": "2026-09-26T05:47:06.161413+00:00"
+      "created_at": "2026-09-24T06:14:31.310444+00:00",
+      "updated_at": "2026-09-26T06:14:31.310444+00:00"
     }
   },
   "documents": {
@@ -1754,8 +1754,8 @@
         "AI Resume Intelligence Engine"
       ],
       "parsing_status": "PARSED",
-      "created_at": "2026-09-24T05:47:06.161413+00:00",
-      "updated_at": "2026-09-24T05:47:06.161413+00:00"
+      "created_at": "2026-09-24T06:14:31.310444+00:00",
+      "updated_at": "2026-09-24T06:14:31.310444+00:00"
     },
     "doc_project_alex_02": {
       "id": "doc_project_alex_02",
@@ -1778,8 +1778,8 @@
         "Distributed Rate Limiter"
       ],
       "parsing_status": "PARSED",
-      "created_at": "2026-09-25T05:47:06.161413+00:00",
-      "updated_at": "2026-09-25T05:47:06.161413+00:00"
+      "created_at": "2026-09-25T06:14:31.310444+00:00",
+      "updated_at": "2026-09-25T06:14:31.310444+00:00"
     }
   },
   "events": {
@@ -1791,7 +1791,7 @@
         "ip": "127.0.0.1",
         "device": "Chrome Windows"
       },
-      "timestamp": "2026-09-24T05:47:06.161413+00:00"
+      "timestamp": "2026-09-24T06:14:31.310444+00:00"
     },
     "evt_02": {
       "id": "evt_02",
@@ -1801,7 +1801,7 @@
         "assessment_id": "asm_amazon_mock_01",
         "score": 85.0
       },
-      "timestamp": "2026-09-25T05:47:06.161413+00:00"
+      "timestamp": "2026-09-25T06:14:31.310444+00:00"
     }
   }
 }

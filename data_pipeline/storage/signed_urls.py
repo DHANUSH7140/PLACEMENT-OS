@@ -40,20 +40,23 @@ class SignedUrlService:
         mime_type = MIME_TYPE_MAPPING.get(ext, "application/octet-stream")
 
         upload_url = None
-        try:
-            from google.cloud import storage
-            client = storage.Client()
-            bucket = client.bucket(self.bucket_name)
-            blob = bucket.blob(blob_path)
+        client = StorageManager._get_client_safe()
+        if client:
+            try:
+                bucket = client.bucket(self.bucket_name)
+                blob = bucket.blob(blob_path)
 
-            upload_url = blob.generate_signed_url(
-                version="v4",
-                expiration=timedelta(minutes=expires_minutes),
-                method="PUT",
-                content_type=mime_type,
-            )
-        except Exception:
-            # Fallback mock URL for testing
+                upload_url = blob.generate_signed_url(
+                    version="v4",
+                    expiration=timedelta(minutes=expires_minutes),
+                    method="PUT",
+                    content_type=mime_type,
+                )
+            except Exception:
+                upload_url = None
+
+        if not upload_url:
+            # Fallback mock signed URL for local dev/testing
             upload_url = f"https://storage.googleapis.com/{self.bucket_name}/{blob_path}?mock_signed_token=1"
 
         return {
@@ -70,16 +73,18 @@ class SignedUrlService:
         expires_minutes: int = 60
     ) -> str:
         """Generates a GET signed URL for authorized document download."""
-        try:
-            from google.cloud import storage
-            client = storage.Client()
-            bucket = client.bucket(self.bucket_name)
-            blob = bucket.blob(gcs_blob_path)
+        client = StorageManager._get_client_safe()
+        if client:
+            try:
+                bucket = client.bucket(self.bucket_name)
+                blob = bucket.blob(gcs_blob_path)
 
-            return blob.generate_signed_url(
-                version="v4",
-                expiration=timedelta(minutes=expires_minutes),
-                method="GET",
-            )
-        except Exception:
-            return f"https://storage.googleapis.com/{self.bucket_name}/{gcs_blob_path}?mock_access_token=1"
+                return blob.generate_signed_url(
+                    version="v4",
+                    expiration=timedelta(minutes=expires_minutes),
+                    method="GET",
+                )
+            except Exception:
+                pass
+
+        return f"https://storage.googleapis.com/{self.bucket_name}/{gcs_blob_path}?mock_access_token=1"
