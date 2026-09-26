@@ -195,3 +195,12 @@ async def test_dream_company_dna(client):
     data = response.json()
     assert data["company_name"] == "Google"
     assert "missing_skills" in data
+
+@pytest.mark.anyio
+async def test_dream_company_dna_get(client):
+    response = await client.get("/strategy/dream-company-dna?user_id=test_user_101&company_name=Google&target_role=Backend+Engineer")
+    assert response.status_code == 200
+    data = response.json()
+    assert data["company_name"] == "Google"
+    assert "missing_skills" in data
+

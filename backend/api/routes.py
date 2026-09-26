@@ -142,6 +142,16 @@ def get_placement_route(
 def get_dream_company_dna(req: DreamCompanyDNARequest):
     return strategy_agent.get_dream_company_dna(req)
 
+@router.get("/strategy/dream-company-dna", response_model=DreamCompanyDNAResponse)
+def get_dream_company_dna_query(
+    user_id: str = Query(..., description="Student User ID"),
+    company_name: str = Query("Google", description="Target Company Name"),
+    target_role: str = Query("Backend Engineer", description="Target Role")
+):
+    req = DreamCompanyDNARequest(user_id=user_id, company_name=company_name, target_role=target_role)
+    return strategy_agent.get_dream_company_dna(req)
+
+
 # Cloud Storage Document Handlers
 @router.post("/document/upload-url", response_model=DocumentUploadUrlResponse)
 def generate_document_upload_url(req: DocumentUploadUrlRequest):
